@@ -101,8 +101,8 @@ class MainWindow(QMainWindow):
         self.last_username = username
         self.last_password = password
         
-        # First detect available slots
-        self.detect_slots(ip, username, password)
+        # Detect available slots using the direct API method
+        self.detect_slots(ip, username, password, use_direct_api=True)
 
     def refresh_data(self, ip, slot, username, password):
         """Refresh data for a specific slot"""
@@ -185,9 +185,16 @@ class MainWindow(QMainWindow):
         logger.info("Application closing")
         event.accept()
 
-    def detect_slots(self, ip, username, password):
-        """Detect available slots in the device"""
-        logger.info(f"Starting slot detection for {ip}")
+    def detect_slots(self, ip, username, password, use_direct_api=True):
+        """Detect available slots in the device
+        
+        Args:
+            ip (str): The device IP address
+            username (str): Username for authentication
+            password (str): Password for authentication
+            use_direct_api (bool, optional): Whether to use the direct API endpoint. Defaults to True.
+        """
+        logger.info(f"Starting slot detection for {ip} (using direct API: {use_direct_api})")
         
         # Create or update API client if needed
         if (self.api_client is None or
@@ -200,7 +207,7 @@ class MainWindow(QMainWindow):
         self.statusBar().showMessage("Detecting slots...")
         
         # Create worker thread for slot detection
-        self.slot_detection_worker = SlotDetectionWorker(self.api_client)
+        self.slot_detection_worker = SlotDetectionWorker(self.api_client, use_direct_api=use_direct_api)
         self.slot_detection_worker.slotsDetected.connect(self.handle_detected_slots)
         self.slot_detection_worker.error.connect(self.handle_slot_detection_error)
         self.slot_detection_worker.finished.connect(self.on_slot_detection_finished)

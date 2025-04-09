@@ -147,6 +147,85 @@ class DeviceApiClient:
         logger.info(f"Detected {len(available_slots)} slots: {available_slots}")
         return available_slots
 
+    def detect_slots_direct(self):
+        """Detect available slots in the device using direct API endpoint
+        
+        This method uses the shelf/slots/detected_coll API endpoint to get all detected
+        slots in a single request, which is more efficient than probing each slot individually.
+        
+        Returns:
+            list: A sorted list of detected slot numbers
+        """
+        logger.info("Detecting available slots using direct API endpoint")
+        
+        # Ensure we're authenticated
+        if not self.authenticate():
+            logger.error("Failed to authenticate, cannot detect slots")
+            return []
+        
+        try:
+            # Use the direct API endpoint for slot detection
+            url = f"http://{self.base_ip}/api/data/shelf/slots/detected_coll"
+            logger.debug(f"Fetching slots from direct API: {url}")
+            
+            response = self.session.get(url, timeout=10)
+            
+            # Check if we got redirected to login page
+            if "login" in response.url.lower() or (
+                response.status_code == 200 and "login" in response.text.lower()[:1000]):
+                logger.warning("Session expired, attempting to re-authenticate")
+                # Try to authenticate again
+                self.authenticated = False
+                if not self.authenticate():
+                    logger.error("Re-authentication failed")
+                    return []
+                
+                # Retry the request
+                response = self.session.get(url, timeout=10)
+                
+            if response.status_code == 200:
+                # Parse the JSON response
+                try:
+                    data = response.json()
+                    # Extract slot numbers from the response
+                    slots = []
+                    # The structure is expected to be: data -> shelf -> slots -> detected_coll -> {slot_numbers}
+                    if (data and 'data' in data and 'shelf' in data['data'] and 
+                        'slots' in data['data']['shelf'] and 'detected_coll' in data['data']['shelf']['slots']):
+                        detected_slots = data['data']['shelf']['slots']['detected_coll']
+                        # The keys in detected_coll should be slot numbers (as strings)
+                        slots = [int(slot_num) for slot_num in detected_slots.keys()]
+                        logger.info(f"Successfully detected {len(slots)} slots via direct API: {slots}")
+                        return sorted(slots)  # Return slots in numerical order
+                    else:
+                        logger.warning("Unexpected response structure from direct API")
+                        logger.debug(f"Response: {data}")
+                except json.JSONDecodeError:
+                    logger.error("Failed to parse JSON response from direct API")
+                    # Try to extract JSON content if not valid JSON
+                    json_content = self._extract_json_from_content(response.text)
+                    if json_content:
+                        logger.debug("Extracted JSON content, trying to process again")
+                        # Process the extracted JSON
+                        try:
+                            if (json_content and 'data' in json_content and 'shelf' in json_content['data'] and 
+                                'slots' in json_content['data']['shelf'] and 'detected_coll' in json_content['data']['shelf']['slots']):
+                                detected_slots = json_content['data']['shelf']['slots']['detected_coll']
+                                slots = [int(slot_num) for slot_num in detected_slots.keys()]
+                                logger.info(f"Successfully detected {len(slots)} slots via direct API (from extracted JSON): {slots}")
+                                return sorted(slots)
+                        except Exception as e:
+                            logger.error(f"Error processing extracted JSON: {str(e)}")
+            else:
+                logger.warning(f"Failed to fetch slots via direct API: status code {response.status_code}")
+                
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Request error fetching slots via direct API: {str(e)}")
+        
+        # Fallback to the original method if direct API fails
+        logger.info("Falling back to slot-by-slot detection")
+        return self.detect_slots()
+
     def get_slot_data(self, slot_number):
         """Get comprehensive data from a specific slot/card"""
         # Ensure we're authenticated

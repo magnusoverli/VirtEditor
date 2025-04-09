@@ -65,15 +65,22 @@ class SlotDetectionWorker(QThread):
     slotsDetected = pyqtSignal(list)
     error = pyqtSignal(str)
     
-    def __init__(self, client, max_slots=10):
+    def __init__(self, client, max_slots=10, use_direct_api=True):
         super().__init__()
         self.client = client
         self.max_slots = max_slots
+        self.use_direct_api = use_direct_api
         
     def run(self):
-        logger.debug(f"Slot detection worker started (max slots: {self.max_slots})")
+        logger.debug(f"Slot detection worker started (max slots: {self.max_slots}, use direct API: {self.use_direct_api})")
         try:
-            slots = self.client.detect_slots(self.max_slots)
+            if self.use_direct_api:
+                # Try the direct API first
+                slots = self.client.detect_slots_direct()
+            else:
+                # Use the original method
+                slots = self.client.detect_slots(self.max_slots)
+                
             logger.debug(f"Slot detection complete, found: {slots}")
             self.slotsDetected.emit(slots)
         except Exception as e:
