@@ -155,13 +155,7 @@ class ConnectionPanel(QGroupBox):
         
         # Unblock signals
         self.slot_combo.blockSignals(False)
-    
-    def force_update_ui(self):
-        """Safely update the UI without recursive repaints"""
-        # Removed the explicit update calls to prevent recursive repaints
-        # Just let the Qt event loop handle the updates naturally
-        pass
-    
+
     def set_connecting_state(self):
         """Update UI for connecting state"""
         logger.debug("Setting UI to connecting state")

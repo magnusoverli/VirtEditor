@@ -180,42 +180,6 @@ class MainWindow(QMainWindow):
         # Start fetching
         self.slot_data_fetcher.start()
         logger.info(f"Started parallel fetching for {len(slots)} slots")
-    
-    def fetch_all_slots_worker(self, slots):
-        """Worker function to fetch data from all slots"""
-        logger.info(f"Starting to fetch data from {len(slots)} slots")
-        self.all_slots_data = {}
-        
-        for i, slot in enumerate(slots):
-            try:
-                # Update progress
-                self.all_slots_progress = i
-                self.statusBar().showMessage(f"Fetching data from slot {slot} ({i+1}/{len(slots)})...")
-                self.progress_bar.setValue(i)
-                
-                # Get data
-                data = self.api_client.get_slot_data(slot)
-                
-                if data and isinstance(data, dict) and data.get('data'):
-                    self.all_slots_data[slot] = data
-                    logger.info(f"Successfully fetched data for slot {slot}")
-                else:
-                    logger.warning(f"Failed to get valid data for slot {slot}")
-            except Exception as e:
-                logger.error(f"Error fetching data for slot {slot}: {str(e)}")
-        
-        # Complete
-        self.all_slots_progress = len(slots)
-        self.progress_bar.setValue(len(slots))
-        
-        # Signal completion on the main thread
-        if self.all_slots_data:
-            self.all_slots_data_ready.emit(self.all_slots_data)
-        else:
-            # Handle the case where no data was collected
-            self.statusBar().showMessage("Failed to collect data from any slot")
-            self.connection_panel.set_error_state()
-            self.progress_bar.setVisible(False)
 
     def update_all_slots_progress(self, current, total):
         """Update the progress bar for all slots operation"""
