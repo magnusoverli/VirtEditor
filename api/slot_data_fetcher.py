@@ -4,6 +4,8 @@ from PyQt6.QtCore import QObject, pyqtSignal, pyqtSlot, QThread, QTimer
 
 from utils.logger import logger
 
+from api.base_worker import BaseApiWorker
+
 class SlotDataFetcher(QObject):
     """Class to manage concurrent fetching of data from multiple slots"""
     

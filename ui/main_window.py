@@ -93,7 +93,29 @@ class MainWindow(QMainWindow):
         # Exit action
         exit_action = file_menu.addAction("E&xit")
         exit_action.triggered.connect(self.close)
-    
+
+    def handle_operation_error(self, error_msg, operation_name="Operation", worker_attr=None):
+        """Handle errors from various API operations with standardized approach"""
+        self.statusBar().showMessage(f"{operation_name} failed")
+        self.connection_panel.set_error_state()
+        self.progress_bar.setVisible(False)
+        
+        logger.error(f"{operation_name} error: {error_msg}")
+        
+        # Clean up the worker if specified
+        if worker_attr:
+            self.cleanup_worker(worker_attr)
+        
+        # Refresh button only enabled if we had a successful connection before
+        if hasattr(self, 'last_ip') and self.last_ip and operation_name == "API Request":
+            self.connection_panel.refresh_button.setEnabled(True)
+        
+        # Special handling for slot detection
+        if operation_name == "Slot Detection":
+            self.connection_panel.update_slots([])  # Clear slots
+        
+        QMessageBox.critical(self, f"{operation_name} Error", error_msg)
+
     def show_log_viewer(self):
         """Show the log viewer dialog"""
         if self.log_viewer is None:
@@ -168,7 +190,7 @@ class MainWindow(QMainWindow):
             self.slot_data_fetcher = None
         
         # Create new slot data fetcher
-        from slot_data_fetcher import SlotDataFetcher
+        from api.slot_data_fetcher import SlotDataFetcher
         self.slot_data_fetcher = SlotDataFetcher(self.api_client, slots)
         
         # Connect signals
@@ -188,12 +210,7 @@ class MainWindow(QMainWindow):
 
     def handle_all_slots_error(self, error_msg):
         """Handle errors during all slots fetching"""
-        self.statusBar().showMessage("Error fetching slot data")
-        self.connection_panel.set_error_state()
-        self.progress_bar.setVisible(False)
-        
-        logger.error(f"All slots fetch error: {error_msg}")
-        QMessageBox.critical(self, "Fetch Error", error_msg)
+        self.handle_operation_error(error_msg, "All Slots Fetch", 'slot_data_fetcher')
 
     @pyqtSlot(dict)
     def display_all_slots_data(self, all_slots_data):
@@ -262,6 +279,25 @@ class MainWindow(QMainWindow):
         if hasattr(self, worker_attr) and getattr(self, worker_attr) is not None:
             worker = getattr(self, worker_attr)
             try:
+                # Disconnect signals based on worker type
+                if worker_attr == 'slot_data_fetcher':
+                    logger.debug(f"Disconnecting signals for {worker_attr}")
+                    worker.progress_updated.disconnect()
+                    worker.all_data_ready.disconnect()
+                    worker.error_occurred.disconnect()
+                    worker.finished.disconnect()
+                elif worker_attr == 'worker':  # ApiWorker
+                    logger.debug(f"Disconnecting signals for {worker_attr}")
+                    worker.dataReady.disconnect()
+                    worker.error.disconnect()
+                    worker.finished.disconnect()
+                elif worker_attr == 'slot_detection_worker':
+                    logger.debug(f"Disconnecting signals for {worker_attr}")
+                    worker.slotsDetected.disconnect()
+                    worker.error.disconnect()
+                    worker.finished.disconnect()
+                
+                # Stop and clean up the worker
                 worker.stop()
                 worker.deleteLater()
                 setattr(self, worker_attr, None)
@@ -315,35 +351,14 @@ class MainWindow(QMainWindow):
     
     def handle_error(self, error_msg):
         """Handle API errors"""
-        self.statusBar().showMessage("Error")
-        self.connection_panel.set_error_state()
-        
-        logger.error(f"API error: {error_msg}")
-        
-        # Clean up the worker
-        self.cleanup_worker('worker')
-        
-        # Hide progress bar if visible
-        self.progress_bar.setVisible(False)
-        
-        # Refresh button only enabled if we had a successful connection before
-        if self.last_ip:
-            self.connection_panel.refresh_button.setEnabled(True)
-        
-        QMessageBox.critical(self, "API Error", error_msg)
+        self.handle_operation_error(error_msg, "API Request", 'worker')
     
     def closeEvent(self, event):
         """Handle window close event"""
         # Clean up any running threads
         self.cleanup_worker('worker')
         self.cleanup_worker('slot_detection_worker')
-        
-        # Stop parallel fetcher if running
-        if hasattr(self, 'slot_data_fetcher') and self.slot_data_fetcher:
-            logger.debug("Stopping slot data fetcher during application close")
-            self.slot_data_fetcher.stop()
-            self.slot_data_fetcher.deleteLater()
-            self.slot_data_fetcher = None
+        self.cleanup_worker('slot_data_fetcher')
         
         if self.log_viewer:
             self.log_viewer.close()
@@ -404,33 +419,12 @@ class MainWindow(QMainWindow):
 
     def handle_slot_detection_error(self, error_msg):
         """Handle errors during slot detection"""
-        logger.error(f"Slot detection error: {error_msg}")
-        self.statusBar().showMessage("Slot detection failed")
-        self.is_connected = False
-        
-        # Clean up the worker
-        self.cleanup_worker('slot_detection_worker')
-        
-        # Show error message to the user
-        QMessageBox.warning(self, "Slot Detection Error", error_msg)
-        
-        # Update the UI
-        self.connection_panel.set_error_state()
-        self.connection_panel.update_slots([])  # Clear slots
+        self.handle_operation_error(error_msg, "Slot Detection", 'slot_detection_worker')
 
     def on_slot_data_fetcher_finished(self):
         """Handle cleanup when the slot data fetcher finishes"""
         logger.debug("Slot data fetcher finished, cleaning up")
-        if hasattr(self, 'slot_data_fetcher') and self.slot_data_fetcher:
-            # Disconnect all signals
-            self.slot_data_fetcher.progress_updated.disconnect()
-            self.slot_data_fetcher.all_data_ready.disconnect()
-            self.slot_data_fetcher.error_occurred.disconnect()
-            self.slot_data_fetcher.finished.disconnect()
-            
-            # Properly delete the object
-            self.slot_data_fetcher.deleteLater()
-            self.slot_data_fetcher = None
+        self.cleanup_worker('slot_data_fetcher')
 
     def on_slot_selection(self, index):
         """Handle user slot selection"""

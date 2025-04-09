@@ -142,12 +142,15 @@ class ConnectionPanel(QGroupBox):
             # Set to "Connected - Select Slot" state
             self.set_select_slot_state()
             
+            # Remove placeholder text as we now have actual items
+            self.slot_combo.setPlaceholderText("")
+            
             # Don't automatically select a slot - let the user choose
             logger.debug("Slots populated, ready for user selection")
         else:
             logger.debug("No slots to add to dropdown")
-            # If no slots detected, leave the combo box empty 
-            # (the placeholder text will show)
+            # If no slots detected, set the placeholder text
+            self.slot_combo.setPlaceholderText("No slots detected")
             self.slot_combo.setEnabled(False)
             self.refresh_button.setEnabled(False)
             self.connection_status.setText("No slots available")

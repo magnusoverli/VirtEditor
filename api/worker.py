@@ -3,16 +3,16 @@ import requests
 from PyQt6.QtCore import QThread, pyqtSignal, Qt
 from utils.logger import logger
 
-class ApiWorker(QThread):
+from api.base_worker import BaseApiWorker
+
+class ApiWorker(BaseApiWorker):
     """Worker thread to fetch data from the API"""
     dataReady = pyqtSignal(dict)
-    error = pyqtSignal(str)
     
     def __init__(self, client, slot):
         super().__init__()
         self.client = client
         self.slot = slot
-        self.running = True
         
     def run(self):
         logger.debug(f"API worker started for slot {self.slot}")
@@ -76,36 +76,23 @@ class ApiWorker(QThread):
             error_msg = f"Error fetching data: {str(e)}"
             logger.error(error_msg)
             self.error.emit(error_msg)
-    
-    def stop(self):
-        """Safely stop the thread"""
-        logger.debug(f"Stopping API worker for slot {self.slot}")
-        self.running = False
-        self.wait()  # Wait for the thread to finish
 
-class SlotDetectionWorker(QThread):
+class SlotDetectionWorker(BaseApiWorker):
     """Worker thread to detect available slots"""
     slotsDetected = pyqtSignal(list)
-    error = pyqtSignal(str)
     
-    def __init__(self, client, max_slots=10, use_direct_api=True):
+    def __init__(self, client, max_slots=10):
         super().__init__()
         self.client = client
         self.max_slots = max_slots
-        self.use_direct_api = use_direct_api
-        self.running = True
         
     def run(self):
-        logger.debug(f"Slot detection worker started (max slots: {self.max_slots}, direct API: {self.use_direct_api})")
+        logger.debug(f"Slot detection worker started (max slots: {self.max_slots})")
         try:
             if not self.running:
                 return
                 
-            # Both methods now use the same implementation, but we'll respect the parameter for compatibility
-            if self.use_direct_api:
-                slots = self.client.detect_slots_direct(self.max_slots)
-            else:
-                slots = self.client.detect_slots(self.max_slots)
+            slots = self.client.detect_slots(self.max_slots)
             
             if not self.running:
                 return
@@ -118,9 +105,3 @@ class SlotDetectionWorker(QThread):
             error_msg = f"Error detecting slots: {str(e)}"
             logger.error(error_msg)
             self.error.emit(error_msg)
-    
-    def stop(self):
-        """Safely stop the thread"""
-        logger.debug("Stopping slot detection worker")
-        self.running = False
-        self.wait()  # Wait for the thread to finish

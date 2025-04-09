@@ -118,11 +118,6 @@ class DeviceApiClient:
             logger.error(f"Authentication error: {str(e)}")
             return False
 
-    # Define both method names to ensure backward compatibility
-    def detect_slots_direct(self, max_slots=10):
-        """Alias for detect_slots to maintain backward compatibility"""
-        return self.detect_slots(max_slots)
-        
     def detect_slots(self, max_slots=10):
         """Detect available slots using the direct API endpoint"""
         logger.info("Detecting available slots using direct shelf API")
