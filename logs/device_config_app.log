@@ -1,0 +1,770 @@
+2025-04-09 11:07:49,838 - INFO - device_config_app - Application starting
+2025-04-09 11:07:49,880 - INFO - device_config_app - Main window initialized
+2025-04-09 11:07:49,958 - INFO - device_config_app - Main window displayed
+2025-04-09 11:07:52,997 - INFO - device_config_app - Log viewer opened
+2025-04-09 11:08:01,230 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 11:08:01,231 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 11:08:01,232 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 11:08:01,238 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 11:08:01,238 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 11:08:01,239 - DEBUG - device_config_app - API request: GET http://10.51.128.92/slot/1/api/data.json
+2025-04-09 11:08:06,293 - DEBUG - device_config_app - API response: 200 OK
+2025-04-09 11:08:06,293 - ERROR - device_config_app - Invalid JSON response from the device.
+2025-04-09 11:08:06,298 - ERROR - device_config_app - API error: Invalid JSON response from the device.
+2025-04-09 11:10:38,160 - INFO - device_config_app - Application closing
+2025-04-09 11:10:38,194 - INFO - device_config_app - Application exiting with code 0
+2025-04-09 11:11:03,639 - INFO - device_config_app - Application starting
+2025-04-09 11:11:03,693 - INFO - device_config_app - Main window initialized
+2025-04-09 11:11:03,773 - INFO - device_config_app - Main window displayed
+2025-04-09 11:11:15,320 - INFO - device_config_app - Application closing
+2025-04-09 11:11:15,358 - INFO - device_config_app - Application exiting with code 0
+2025-04-09 11:12:56,352 - INFO - device_config_app - Application starting
+2025-04-09 11:12:56,385 - INFO - device_config_app - Main window initialized
+2025-04-09 11:12:56,484 - INFO - device_config_app - Main window displayed
+2025-04-09 11:12:59,597 - INFO - device_config_app - Log viewer opened
+2025-04-09 11:13:05,078 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 11:13:05,078 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 11:13:05,080 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 11:13:05,085 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 11:13:05,085 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 11:13:05,085 - DEBUG - device_config_app - API request: GET http://10.51.128.92/slot/1/api/data.json
+2025-04-09 11:13:10,145 - DEBUG - device_config_app - API response: 200 OK
+2025-04-09 11:13:10,145 - ERROR - device_config_app - Invalid JSON response from the device.
+2025-04-09 11:13:10,153 - ERROR - device_config_app - API error: Invalid JSON response from the device.
+2025-04-09 11:13:15,699 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 11:13:15,700 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 11:13:15,701 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 11:13:15,705 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 11:13:15,705 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 11:13:15,706 - DEBUG - device_config_app - API request: GET http://10.51.128.92/slot/1/api/data.json
+2025-04-09 11:13:20,775 - DEBUG - device_config_app - API response: 200 OK
+2025-04-09 11:13:20,776 - ERROR - device_config_app - Invalid JSON response from the device.
+2025-04-09 11:13:20,779 - ERROR - device_config_app - API error: Invalid JSON response from the device.
+2025-04-09 11:13:41,911 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 11:13:41,912 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 11:13:41,914 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 11:13:41,916 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 11:13:41,917 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 11:13:41,918 - DEBUG - device_config_app - API request: GET http://10.51.128.92/slot/1/api/data.json
+2025-04-09 11:13:46,972 - DEBUG - device_config_app - API response: 200 OK
+2025-04-09 11:13:46,972 - ERROR - device_config_app - Invalid JSON response from the device.
+2025-04-09 11:13:46,974 - ERROR - device_config_app - API error: Invalid JSON response from the device.
+2025-04-09 11:16:42,704 - INFO - device_config_app - Application closing
+2025-04-09 11:16:42,734 - INFO - device_config_app - Application exiting with code 0
+2025-04-09 11:17:10,881 - INFO - device_config_app - Application starting
+2025-04-09 11:17:10,920 - INFO - device_config_app - Main window initialized
+2025-04-09 11:17:10,996 - INFO - device_config_app - Main window displayed
+2025-04-09 11:17:13,777 - INFO - device_config_app - Log viewer opened
+2025-04-09 11:17:21,752 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 11:17:21,753 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 11:17:21,754 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 11:17:21,758 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 11:17:21,758 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 11:17:21,758 - DEBUG - device_config_app - API request: GET http://10.51.128.92/slot/1/api/data.json
+2025-04-09 11:17:26,809 - DEBUG - device_config_app - API response: 200 OK
+2025-04-09 11:17:26,809 - DEBUG - device_config_app - Response Content-Type: text/html; charset=utf-8
+2025-04-09 11:17:26,809 - DEBUG - device_config_app - HTML response detected, extracting JSON from <pre> tags
+2025-04-09 11:17:26,810 - WARNING - device_config_app - No <pre> tag found in HTML, attempting to extract JSON from body
+2025-04-09 11:17:26,811 - ERROR - device_config_app - Could not extract valid JSON from HTML response
+2025-04-09 11:17:26,811 - DEBUG - device_config_app - Data received from slot 1
+2025-04-09 11:17:26,820 - INFO - device_config_app - Successfully connected to 10.51.128.92, slot 1
+2025-04-09 11:17:26,820 - DEBUG - device_config_app - Processing device data
+2025-04-09 11:17:26,820 - WARNING - device_config_app - Could not extract product info: 'data'
+2025-04-09 11:17:26,821 - WARNING - device_config_app - Could not extract time info: 'data'
+2025-04-09 11:17:26,822 - WARNING - device_config_app - Could not extract memory info: 'data'
+2025-04-09 11:17:26,822 - WARNING - device_config_app - Could not extract alarm info: 'data'
+2025-04-09 11:17:26,826 - DEBUG - device_config_app - Device data processing complete
+2025-04-09 11:18:11,287 - INFO - device_config_app - Application closing
+2025-04-09 11:18:11,321 - INFO - device_config_app - Application exiting with code 0
+2025-04-09 11:21:53,203 - INFO - device_config_app - Application starting
+2025-04-09 11:21:53,249 - INFO - device_config_app - Main window initialized
+2025-04-09 11:21:53,332 - INFO - device_config_app - Main window displayed
+2025-04-09 11:21:58,616 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 11:21:58,616 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 11:21:58,617 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 11:21:58,619 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 11:21:58,620 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 11:21:58,620 - DEBUG - device_config_app - Fetching API index: GET http://10.51.128.92/slot/1/api/data.html
+2025-04-09 11:22:01,848 - INFO - device_config_app - Log viewer opened
+2025-04-09 11:22:03,663 - DEBUG - device_config_app - Index page response: 200 OK
+2025-04-09 11:22:03,664 - INFO - device_config_app - Discovered 0 data sections: 
+2025-04-09 11:22:03,664 - DEBUG - device_config_app - Data received from slot 1
+2025-04-09 11:22:03,667 - INFO - device_config_app - Successfully connected to 10.51.128.92, slot 1
+2025-04-09 11:22:03,667 - DEBUG - device_config_app - Processing device data
+2025-04-09 11:22:03,668 - DEBUG - device_config_app - Device data processing complete
+2025-04-09 11:22:08,944 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 11:22:08,947 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 11:22:08,948 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 11:22:08,948 - DEBUG - device_config_app - Fetching API index: GET http://10.51.128.92/slot/1/api/data.html
+2025-04-09 11:22:13,988 - DEBUG - device_config_app - Index page response: 200 OK
+2025-04-09 11:22:13,989 - INFO - device_config_app - Discovered 0 data sections: 
+2025-04-09 11:22:13,990 - DEBUG - device_config_app - Data received from slot 1
+2025-04-09 11:22:13,991 - INFO - device_config_app - Successfully connected to 10.51.128.92, slot 1
+2025-04-09 11:22:13,992 - DEBUG - device_config_app - Processing device data
+2025-04-09 11:22:13,992 - DEBUG - device_config_app - Device data processing complete
+2025-04-09 11:25:23,672 - INFO - device_config_app - Application closing
+2025-04-09 11:25:23,700 - INFO - device_config_app - Application exiting with code 0
+2025-04-09 11:25:26,723 - INFO - device_config_app - Application starting
+2025-04-09 11:25:26,770 - INFO - device_config_app - Main window initialized
+2025-04-09 11:25:26,847 - INFO - device_config_app - Main window displayed
+2025-04-09 11:25:34,903 - INFO - device_config_app - Log viewer opened
+2025-04-09 11:25:38,718 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 11:25:38,719 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 11:25:38,720 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 11:25:38,723 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 11:25:38,723 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 11:25:38,724 - DEBUG - device_config_app - Fetching API index: GET http://10.51.128.92/slot/1/api/data.html
+2025-04-09 11:25:43,802 - DEBUG - device_config_app - Index page response: 200 OK
+2025-04-09 11:25:43,802 - DEBUG - device_config_app - HTML index content sample: <!DOCTYPE html><html><head><title>Login</title></head><body link="black" vlink="black"><h1>API Login</h1><form action="/api/login" method="post"><table><tr><td>User</td><td><input type="text" name="us...
+2025-04-09 11:25:43,804 - DEBUG - device_config_app - Page title: Login
+2025-04-09 11:25:43,805 - DEBUG - device_config_app - Found 0 list items directly
+2025-04-09 11:25:43,805 - DEBUG - device_config_app - Found 0 unordered lists
+2025-04-09 11:25:43,805 - WARNING - device_config_app - Could not extract sections using standard methods, trying raw text approach
+2025-04-09 11:25:43,807 - WARNING - device_config_app - No data sections discovered, falling back to default sections
+2025-04-09 11:25:43,810 - DEBUG - device_config_app - Fetching section 'Device info' from http://10.51.128.92/slot/1/api/data/dev.json
+2025-04-09 11:25:48,853 - DEBUG - device_config_app - Looking for JSON-like content in HTML
+2025-04-09 11:25:48,853 - DEBUG - device_config_app - Fetching section 'Store' from http://10.51.128.92/slot/1/api/data/store.json
+2025-04-09 11:25:53,885 - DEBUG - device_config_app - Looking for JSON-like content in HTML
+2025-04-09 11:25:53,885 - DEBUG - device_config_app - Fetching section 'Alarms' from http://10.51.128.92/slot/1/api/data/alarms.json
+2025-04-09 11:25:58,921 - DEBUG - device_config_app - Looking for JSON-like content in HTML
+2025-04-09 11:25:58,922 - DEBUG - device_config_app - Data received from slot 1
+2025-04-09 11:25:58,925 - INFO - device_config_app - Successfully connected to 10.51.128.92, slot 1
+2025-04-09 11:25:58,926 - DEBUG - device_config_app - Processing device data
+2025-04-09 11:25:58,927 - DEBUG - device_config_app - Device data processing complete
+2025-04-09 11:27:38,719 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 11:27:38,720 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 11:27:38,721 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 11:27:38,723 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 11:27:38,723 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 11:27:38,724 - DEBUG - device_config_app - Fetching API index: GET http://10.51.128.92/slot/1/api/data.html
+2025-04-09 11:27:43,759 - DEBUG - device_config_app - Index page response: 200 OK
+2025-04-09 11:27:43,759 - DEBUG - device_config_app - HTML index content sample: <!DOCTYPE html><html><head><title>Login</title></head><body link="black" vlink="black"><h1>API Login</h1><form action="/api/login" method="post"><table><tr><td>User</td><td><input type="text" name="us...
+2025-04-09 11:27:43,759 - DEBUG - device_config_app - Page title: Login
+2025-04-09 11:27:43,759 - DEBUG - device_config_app - Found 0 list items directly
+2025-04-09 11:27:43,759 - DEBUG - device_config_app - Found 0 unordered lists
+2025-04-09 11:27:43,759 - WARNING - device_config_app - Could not extract sections using standard methods, trying raw text approach
+2025-04-09 11:27:43,760 - WARNING - device_config_app - No data sections discovered, falling back to default sections
+2025-04-09 11:27:43,761 - DEBUG - device_config_app - Fetching section 'Device info' from http://10.51.128.92/slot/1/api/data/dev.json
+2025-04-09 11:27:48,796 - DEBUG - device_config_app - Looking for JSON-like content in HTML
+2025-04-09 11:27:48,796 - DEBUG - device_config_app - Fetching section 'Store' from http://10.51.128.92/slot/1/api/data/store.json
+2025-04-09 11:27:53,823 - DEBUG - device_config_app - Looking for JSON-like content in HTML
+2025-04-09 11:27:53,823 - DEBUG - device_config_app - Fetching section 'Alarms' from http://10.51.128.92/slot/1/api/data/alarms.json
+2025-04-09 11:27:58,884 - DEBUG - device_config_app - Looking for JSON-like content in HTML
+2025-04-09 11:27:58,884 - DEBUG - device_config_app - Data received from slot 1
+2025-04-09 11:27:58,886 - INFO - device_config_app - Successfully connected to 10.51.128.92, slot 1
+2025-04-09 11:27:58,887 - DEBUG - device_config_app - Processing device data
+2025-04-09 11:27:58,887 - DEBUG - device_config_app - Device data processing complete
+2025-04-09 11:27:59,002 - INFO - device_config_app - Application closing
+2025-04-09 11:27:59,043 - INFO - device_config_app - Application exiting with code 0
+2025-04-09 11:30:23,021 - INFO - device_config_app - Application starting
+2025-04-09 11:30:23,067 - INFO - device_config_app - Main window initialized
+2025-04-09 11:30:23,144 - INFO - device_config_app - Main window displayed
+2025-04-09 11:30:25,183 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 11:30:25,183 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 11:30:25,184 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 11:30:25,187 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 11:30:25,187 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 11:30:25,188 - DEBUG - device_config_app - Fetching login page: http://10.51.128.92/slot/1/api/data.html
+2025-04-09 11:30:25,233 - DEBUG - device_config_app - Found login page
+2025-04-09 11:30:25,234 - DEBUG - device_config_app - Login form action: http://10.51.128.92/api/login
+2025-04-09 11:30:25,234 - DEBUG - device_config_app - Submitting login form with fields: ['username', 'password', 'ref']
+2025-04-09 11:30:28,243 - ERROR - device_config_app - Login form submission failed: status code 401
+2025-04-09 11:30:28,243 - ERROR - device_config_app - Failed to authenticate, cannot fetch data
+2025-04-09 11:30:28,244 - DEBUG - device_config_app - Data received from slot 1
+2025-04-09 11:30:28,245 - INFO - device_config_app - Successfully connected to 10.51.128.92, slot 1
+2025-04-09 11:30:28,245 - DEBUG - device_config_app - Processing device data
+2025-04-09 11:30:28,246 - DEBUG - device_config_app - Device data processing complete
+2025-04-09 11:30:36,827 - INFO - device_config_app - Log viewer opened
+2025-04-09 11:30:41,532 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 11:30:41,536 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 11:30:41,536 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 11:30:41,537 - DEBUG - device_config_app - Fetching login page: http://10.51.128.92/slot/1/api/data.html
+2025-04-09 11:30:41,590 - DEBUG - device_config_app - Found login page
+2025-04-09 11:30:41,591 - DEBUG - device_config_app - Login form action: http://10.51.128.92/api/login
+2025-04-09 11:30:41,591 - DEBUG - device_config_app - Submitting login form with fields: ['username', 'password', 'ref']
+2025-04-09 11:30:44,600 - ERROR - device_config_app - Login form submission failed: status code 401
+2025-04-09 11:30:44,600 - ERROR - device_config_app - Failed to authenticate, cannot fetch data
+2025-04-09 11:30:44,602 - DEBUG - device_config_app - Data received from slot 1
+2025-04-09 11:30:44,605 - INFO - device_config_app - Successfully connected to 10.51.128.92, slot 1
+2025-04-09 11:30:44,605 - DEBUG - device_config_app - Processing device data
+2025-04-09 11:30:44,606 - DEBUG - device_config_app - Device data processing complete
+2025-04-09 11:31:00,703 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 11:31:00,704 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 11:31:00,705 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 11:31:00,708 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 11:31:00,708 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 11:31:00,709 - DEBUG - device_config_app - Fetching login page: http://10.51.128.92/slot/1/api/data.html
+2025-04-09 11:31:00,766 - DEBUG - device_config_app - Found login page
+2025-04-09 11:31:00,767 - DEBUG - device_config_app - Login form action: http://10.51.128.92/api/login
+2025-04-09 11:31:00,768 - DEBUG - device_config_app - Submitting login form with fields: ['username', 'password', 'ref']
+2025-04-09 11:31:00,841 - INFO - device_config_app - Successfully authenticated with the device
+2025-04-09 11:31:00,841 - DEBUG - device_config_app - Fetching data for slot 1
+2025-04-09 11:31:00,842 - DEBUG - device_config_app - Fetching section 'dev' from http://10.51.128.92/slot/1/api/data/dev.json
+2025-04-09 11:31:00,860 - DEBUG - device_config_app - Successfully fetched section 'dev'
+2025-04-09 11:31:00,860 - DEBUG - device_config_app - Fetching section 'store' from http://10.51.128.92/slot/1/api/data/store.json
+2025-04-09 11:31:00,880 - DEBUG - device_config_app - Successfully fetched section 'store'
+2025-04-09 11:31:00,880 - DEBUG - device_config_app - Fetching section 'alarms' from http://10.51.128.92/slot/1/api/data/alarms.json
+2025-04-09 11:31:00,921 - DEBUG - device_config_app - Successfully fetched section 'alarms'
+2025-04-09 11:31:00,921 - DEBUG - device_config_app - Fetching section 'shelf' from http://10.51.128.92/slot/1/api/data/shelf.json
+2025-04-09 11:31:00,940 - DEBUG - device_config_app - Successfully fetched section 'shelf'
+2025-04-09 11:31:00,940 - DEBUG - device_config_app - Fetching section 'elements' from http://10.51.128.92/slot/1/api/data/elements.json
+2025-04-09 11:31:01,017 - DEBUG - device_config_app - Successfully fetched section 'elements'
+2025-04-09 11:31:01,017 - DEBUG - device_config_app - Fetching section 'network' from http://10.51.128.92/slot/1/api/data/network.json
+2025-04-09 11:31:01,036 - DEBUG - device_config_app - Successfully fetched section 'network'
+2025-04-09 11:31:01,036 - INFO - device_config_app - Successfully fetched 6 data sections
+2025-04-09 11:31:01,037 - DEBUG - device_config_app - Data received from slot 1
+2025-04-09 11:31:01,038 - INFO - device_config_app - Successfully connected to 10.51.128.92, slot 1
+2025-04-09 11:31:01,039 - DEBUG - device_config_app - Processing device data
+2025-04-09 11:31:01,039 - DEBUG - device_config_app - Device data processing complete
+2025-04-09 11:31:16,936 - INFO - device_config_app - Application closing
+2025-04-09 11:31:16,973 - INFO - device_config_app - Application exiting with code 0
+2025-04-09 11:31:18,774 - INFO - device_config_app - Application starting
+2025-04-09 11:31:18,806 - INFO - device_config_app - Main window initialized
+2025-04-09 11:31:18,888 - INFO - device_config_app - Main window displayed
+2025-04-09 11:31:21,522 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 11:31:21,522 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 11:31:21,523 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 11:31:21,528 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 11:31:21,528 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 11:31:21,528 - DEBUG - device_config_app - Fetching login page: http://10.51.128.92/slot/1/api/data.html
+2025-04-09 11:31:21,587 - DEBUG - device_config_app - Found login page
+2025-04-09 11:31:21,588 - DEBUG - device_config_app - Login form action: http://10.51.128.92/api/login
+2025-04-09 11:31:21,589 - DEBUG - device_config_app - Submitting login form with fields: ['username', 'password', 'ref']
+2025-04-09 11:31:24,367 - INFO - device_config_app - Application closing
+2025-04-09 11:31:24,400 - INFO - device_config_app - Application exiting with code 0
+2025-04-09 11:31:26,165 - INFO - device_config_app - Application starting
+2025-04-09 11:31:26,207 - INFO - device_config_app - Main window initialized
+2025-04-09 11:31:26,296 - INFO - device_config_app - Main window displayed
+2025-04-09 11:31:28,790 - INFO - device_config_app - Log viewer opened
+2025-04-09 11:31:33,492 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 11:31:33,493 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 11:31:33,493 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 11:31:33,496 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 11:31:33,496 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 11:31:33,497 - DEBUG - device_config_app - Fetching login page: http://10.51.128.92/slot/1/api/data.html
+2025-04-09 11:31:33,572 - DEBUG - device_config_app - Found login page
+2025-04-09 11:31:33,573 - DEBUG - device_config_app - Login form action: http://10.51.128.92/api/login
+2025-04-09 11:31:33,574 - DEBUG - device_config_app - Submitting login form with fields: ['username', 'password', 'ref']
+2025-04-09 11:31:36,584 - ERROR - device_config_app - Login form submission failed: status code 401
+2025-04-09 11:31:36,585 - ERROR - device_config_app - Failed to authenticate, cannot fetch data
+2025-04-09 11:31:36,586 - DEBUG - device_config_app - Data received from slot 1
+2025-04-09 11:31:36,590 - INFO - device_config_app - Successfully connected to 10.51.128.92, slot 1
+2025-04-09 11:31:36,590 - DEBUG - device_config_app - Processing device data
+2025-04-09 11:31:36,590 - DEBUG - device_config_app - Device data processing complete
+2025-04-09 11:33:42,994 - INFO - device_config_app - Application closing
+2025-04-09 11:33:43,035 - INFO - device_config_app - Application exiting with code 0
+2025-04-09 11:33:44,926 - INFO - device_config_app - Application starting
+2025-04-09 11:33:44,976 - INFO - device_config_app - Main window initialized
+2025-04-09 11:33:45,047 - INFO - device_config_app - Main window displayed
+2025-04-09 11:34:27,734 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 11:34:27,734 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 11:34:27,735 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 11:34:27,738 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 11:34:27,738 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 11:34:27,738 - DEBUG - device_config_app - Fetching login page: http://10.51.128.92/slot/1/api/data.html
+2025-04-09 11:34:27,783 - DEBUG - device_config_app - Found login page
+2025-04-09 11:34:27,784 - DEBUG - device_config_app - Login form action: http://10.51.128.92/api/login
+2025-04-09 11:34:27,784 - DEBUG - device_config_app - Submitting login form with fields: ['username', 'password', 'ref']
+2025-04-09 11:34:30,794 - ERROR - device_config_app - Login form submission failed: status code 401
+2025-04-09 11:34:30,794 - ERROR - device_config_app - Failed to authenticate, cannot fetch data
+2025-04-09 11:34:30,794 - ERROR - device_config_app - Empty data returned, likely due to authentication failure
+2025-04-09 11:34:30,795 - ERROR - device_config_app - API error: Authentication failed. Please check username and password.
+2025-04-09 11:34:36,907 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 11:34:36,907 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 11:34:36,908 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 11:34:36,911 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 11:34:36,911 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 11:34:36,912 - DEBUG - device_config_app - Fetching login page: http://10.51.128.92/slot/1/api/data.html
+2025-04-09 11:34:36,963 - DEBUG - device_config_app - Found login page
+2025-04-09 11:34:36,964 - DEBUG - device_config_app - Login form action: http://10.51.128.92/api/login
+2025-04-09 11:34:36,964 - DEBUG - device_config_app - Submitting login form with fields: ['username', 'password', 'ref']
+2025-04-09 11:34:36,999 - INFO - device_config_app - Successfully authenticated with the device
+2025-04-09 11:34:36,999 - DEBUG - device_config_app - Fetching data for slot 1
+2025-04-09 11:34:36,999 - DEBUG - device_config_app - Fetching section 'dev' from http://10.51.128.92/slot/1/api/data/dev.json
+2025-04-09 11:34:37,043 - DEBUG - device_config_app - Successfully fetched section 'dev'
+2025-04-09 11:34:37,044 - DEBUG - device_config_app - Fetching section 'store' from http://10.51.128.92/slot/1/api/data/store.json
+2025-04-09 11:34:37,063 - DEBUG - device_config_app - Successfully fetched section 'store'
+2025-04-09 11:34:37,063 - DEBUG - device_config_app - Fetching section 'alarms' from http://10.51.128.92/slot/1/api/data/alarms.json
+2025-04-09 11:34:37,104 - DEBUG - device_config_app - Successfully fetched section 'alarms'
+2025-04-09 11:34:37,104 - DEBUG - device_config_app - Fetching section 'shelf' from http://10.51.128.92/slot/1/api/data/shelf.json
+2025-04-09 11:34:37,123 - DEBUG - device_config_app - Successfully fetched section 'shelf'
+2025-04-09 11:34:37,123 - DEBUG - device_config_app - Fetching section 'elements' from http://10.51.128.92/slot/1/api/data/elements.json
+2025-04-09 11:34:37,435 - DEBUG - device_config_app - Successfully fetched section 'elements'
+2025-04-09 11:34:37,435 - DEBUG - device_config_app - Fetching section 'network' from http://10.51.128.92/slot/1/api/data/network.json
+2025-04-09 11:34:37,455 - DEBUG - device_config_app - Successfully fetched section 'network'
+2025-04-09 11:34:37,456 - INFO - device_config_app - Successfully fetched 6 data sections
+2025-04-09 11:34:37,456 - DEBUG - device_config_app - Data received from slot 1
+2025-04-09 11:34:37,457 - INFO - device_config_app - Successfully connected to 10.51.128.92, slot 1
+2025-04-09 11:34:37,457 - DEBUG - device_config_app - Processing device data
+2025-04-09 11:34:37,457 - DEBUG - device_config_app - Device data processing complete
+2025-04-09 11:37:11,333 - INFO - device_config_app - Application closing
+2025-04-09 11:37:11,370 - INFO - device_config_app - Application exiting with code 0
+2025-04-09 11:41:47,099 - INFO - device_config_app - Application starting
+2025-04-09 11:41:47,161 - INFO - device_config_app - Main window initialized
+2025-04-09 11:41:47,249 - INFO - device_config_app - Main window displayed
+2025-04-09 11:41:50,327 - INFO - device_config_app - Log viewer opened
+2025-04-09 11:41:58,650 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 11:41:58,651 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 11:41:58,652 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 11:41:58,657 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 11:41:58,657 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 11:41:58,657 - DEBUG - device_config_app - Fetching login page: http://10.51.128.92/slot/1/api/data.html
+2025-04-09 11:42:08,671 - ERROR - device_config_app - Authentication error: HTTPConnectionPool(host='10.51.128.92', port=80): Max retries exceeded with url: /slot/1/api/data.html (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000248E192C1A0>, 'Connection to 10.51.128.92 timed out. (connect timeout=10)'))
+2025-04-09 11:42:08,672 - ERROR - device_config_app - Failed to authenticate, cannot fetch data
+2025-04-09 11:42:08,674 - ERROR - device_config_app - Empty data returned, likely due to authentication failure
+2025-04-09 11:42:08,679 - ERROR - device_config_app - API error: Authentication failed. Please check username and password.
+2025-04-09 11:42:26,671 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 11:42:26,672 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 11:42:26,673 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 11:42:26,676 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 11:42:26,676 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 11:42:26,677 - DEBUG - device_config_app - Fetching login page: http://10.51.128.92/slot/1/api/data.html
+2025-04-09 11:42:26,758 - DEBUG - device_config_app - Found login page
+2025-04-09 11:42:26,759 - DEBUG - device_config_app - Login form action: http://10.51.128.92/api/login
+2025-04-09 11:42:26,759 - DEBUG - device_config_app - Submitting login form with fields: ['username', 'password', 'ref']
+2025-04-09 11:42:26,831 - INFO - device_config_app - Successfully authenticated with the device
+2025-04-09 11:42:26,832 - DEBUG - device_config_app - Fetching data for slot 1
+2025-04-09 11:42:26,832 - DEBUG - device_config_app - Fetching section 'dev' from http://10.51.128.92/slot/1/api/data/dev.json
+2025-04-09 11:42:26,862 - DEBUG - device_config_app - Successfully fetched section 'dev'
+2025-04-09 11:42:26,862 - DEBUG - device_config_app - Fetching section 'store' from http://10.51.128.92/slot/1/api/data/store.json
+2025-04-09 11:42:26,882 - DEBUG - device_config_app - Successfully fetched section 'store'
+2025-04-09 11:42:26,882 - DEBUG - device_config_app - Fetching section 'alarms' from http://10.51.128.92/slot/1/api/data/alarms.json
+2025-04-09 11:42:26,937 - DEBUG - device_config_app - Successfully fetched section 'alarms'
+2025-04-09 11:42:26,938 - DEBUG - device_config_app - Fetching section 'shelf' from http://10.51.128.92/slot/1/api/data/shelf.json
+2025-04-09 11:42:26,966 - DEBUG - device_config_app - Successfully fetched section 'shelf'
+2025-04-09 11:42:26,966 - DEBUG - device_config_app - Fetching section 'elements' from http://10.51.128.92/slot/1/api/data/elements.json
+2025-04-09 11:42:27,278 - DEBUG - device_config_app - Successfully fetched section 'elements'
+2025-04-09 11:42:27,279 - DEBUG - device_config_app - Fetching section 'network' from http://10.51.128.92/slot/1/api/data/network.json
+2025-04-09 11:42:27,298 - DEBUG - device_config_app - Successfully fetched section 'network'
+2025-04-09 11:42:27,299 - INFO - device_config_app - Successfully fetched 6 data sections
+2025-04-09 11:42:27,299 - DEBUG - device_config_app - Data received from slot 1
+2025-04-09 11:42:27,301 - INFO - device_config_app - Successfully connected to 10.51.128.92, slot 1
+2025-04-09 11:42:27,302 - DEBUG - device_config_app - Processing device data
+2025-04-09 11:42:27,302 - DEBUG - device_config_app - Device data processing complete
+2025-04-09 11:42:29,239 - INFO - device_config_app - Starting slot detection for 10.51.128.92
+2025-04-09 11:42:29,242 - DEBUG - device_config_app - Slot detection worker started (max slots: 10)
+2025-04-09 11:42:29,242 - INFO - device_config_app - Detecting available slots (up to 10)
+2025-04-09 11:42:29,243 - DEBUG - device_config_app - Probing slot 1 at http://10.51.128.92/slot/1/api/data/dev.json
+2025-04-09 11:42:29,262 - INFO - device_config_app - Slot 1 is available
+2025-04-09 11:42:29,263 - DEBUG - device_config_app - Probing slot 2 at http://10.51.128.92/slot/2/api/data/dev.json
+2025-04-09 11:42:29,342 - INFO - device_config_app - Slot 2 is available
+2025-04-09 11:42:29,343 - DEBUG - device_config_app - Probing slot 3 at http://10.51.128.92/slot/3/api/data/dev.json
+2025-04-09 11:42:29,386 - INFO - device_config_app - Slot 3 is available
+2025-04-09 11:42:29,387 - DEBUG - device_config_app - Probing slot 4 at http://10.51.128.92/slot/4/api/data/dev.json
+2025-04-09 11:42:29,434 - INFO - device_config_app - Slot 4 is available
+2025-04-09 11:42:29,435 - DEBUG - device_config_app - Probing slot 5 at http://10.51.128.92/slot/5/api/data/dev.json
+2025-04-09 11:42:29,490 - INFO - device_config_app - Slot 5 is available
+2025-04-09 11:42:29,491 - DEBUG - device_config_app - Probing slot 6 at http://10.51.128.92/slot/6/api/data/dev.json
+2025-04-09 11:42:29,551 - INFO - device_config_app - Slot 6 is available
+2025-04-09 11:42:29,551 - DEBUG - device_config_app - Probing slot 7 at http://10.51.128.92/slot/7/api/data/dev.json
+2025-04-09 11:42:29,614 - INFO - device_config_app - Slot 7 is available
+2025-04-09 11:42:29,615 - DEBUG - device_config_app - Probing slot 8 at http://10.51.128.92/slot/8/api/data/dev.json
+2025-04-09 11:42:29,670 - INFO - device_config_app - Slot 8 is available
+2025-04-09 11:42:29,671 - DEBUG - device_config_app - Probing slot 9 at http://10.51.128.92/slot/9/api/data/dev.json
+2025-04-09 11:42:29,678 - DEBUG - device_config_app - Slot 9 not found (404)
+2025-04-09 11:42:29,678 - DEBUG - device_config_app - Probing slot 10 at http://10.51.128.92/slot/10/api/data/dev.json
+2025-04-09 11:42:29,718 - INFO - device_config_app - Slot 10 is available
+2025-04-09 11:42:29,719 - INFO - device_config_app - Detected 9 slots: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 11:42:29,720 - DEBUG - device_config_app - Slot detection complete, found: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 11:42:29,721 - INFO - device_config_app - Detected 9 slots: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 11:44:55,838 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 2
+2025-04-09 11:44:55,840 - DEBUG - device_config_app - API worker started for slot 2
+2025-04-09 11:44:55,840 - INFO - device_config_app - Fetching data from slot 2
+2025-04-09 11:44:55,840 - DEBUG - device_config_app - Fetching data for slot 2
+2025-04-09 11:44:55,841 - DEBUG - device_config_app - Fetching section 'dev' from http://10.51.128.92/slot/2/api/data/dev.json
+2025-04-09 11:44:55,890 - DEBUG - device_config_app - Successfully fetched section 'dev'
+2025-04-09 11:44:55,890 - DEBUG - device_config_app - Fetching section 'store' from http://10.51.128.92/slot/2/api/data/store.json
+2025-04-09 11:44:55,909 - DEBUG - device_config_app - Successfully fetched section 'store'
+2025-04-09 11:44:55,910 - DEBUG - device_config_app - Fetching section 'alarms' from http://10.51.128.92/slot/2/api/data/alarms.json
+2025-04-09 11:44:55,950 - DEBUG - device_config_app - Successfully fetched section 'alarms'
+2025-04-09 11:44:55,950 - DEBUG - device_config_app - Fetching section 'shelf' from http://10.51.128.92/slot/2/api/data/shelf.json
+2025-04-09 11:44:55,970 - DEBUG - device_config_app - Successfully fetched section 'shelf'
+2025-04-09 11:44:55,970 - DEBUG - device_config_app - Fetching section 'elements' from http://10.51.128.92/slot/2/api/data/elements.json
+2025-04-09 11:44:56,053 - DEBUG - device_config_app - Successfully fetched section 'elements'
+2025-04-09 11:44:56,053 - DEBUG - device_config_app - Fetching section 'network' from http://10.51.128.92/slot/2/api/data/network.json
+2025-04-09 11:44:56,078 - DEBUG - device_config_app - Successfully fetched section 'network'
+2025-04-09 11:44:56,078 - INFO - device_config_app - Successfully fetched 6 data sections
+2025-04-09 11:44:56,078 - DEBUG - device_config_app - Data received from slot 2
+2025-04-09 11:44:56,080 - INFO - device_config_app - Successfully connected to 10.51.128.92, slot 2
+2025-04-09 11:44:56,080 - DEBUG - device_config_app - Processing device data
+2025-04-09 11:44:56,080 - DEBUG - device_config_app - Device data processing complete
+2025-04-09 11:49:30,752 - INFO - device_config_app - Application closing
+2025-04-09 11:49:30,785 - INFO - device_config_app - Application exiting with code 0
+2025-04-09 11:49:34,718 - INFO - device_config_app - Application starting
+2025-04-09 11:49:34,769 - INFO - device_config_app - Main window initialized
+2025-04-09 11:49:34,836 - INFO - device_config_app - Main window displayed
+2025-04-09 11:49:41,821 - INFO - device_config_app - Initial connection to 10.51.128.92
+2025-04-09 11:49:41,822 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 11:49:41,822 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 11:49:41,823 - INFO - device_config_app - Starting slot detection for 10.51.128.92
+2025-04-09 11:49:41,827 - DEBUG - device_config_app - Slot detection worker started (max slots: 10)
+2025-04-09 11:49:41,827 - INFO - device_config_app - Detecting available slots (up to 10)
+2025-04-09 11:49:41,827 - DEBUG - device_config_app - Fetching login page: http://10.51.128.92/slot/1/api/data.html
+2025-04-09 11:49:41,880 - DEBUG - device_config_app - Found login page
+2025-04-09 11:49:41,882 - DEBUG - device_config_app - Login form action: http://10.51.128.92/api/login
+2025-04-09 11:49:41,882 - DEBUG - device_config_app - Submitting login form with fields: ['username', 'password', 'ref']
+2025-04-09 11:49:41,929 - INFO - device_config_app - Successfully authenticated with the device
+2025-04-09 11:49:41,930 - DEBUG - device_config_app - Probing slot 1 at http://10.51.128.92/slot/1/api/data/dev.json
+2025-04-09 11:49:41,949 - INFO - device_config_app - Slot 1 is available
+2025-04-09 11:49:41,950 - DEBUG - device_config_app - Probing slot 2 at http://10.51.128.92/slot/2/api/data/dev.json
+2025-04-09 11:49:41,997 - INFO - device_config_app - Slot 2 is available
+2025-04-09 11:49:41,997 - DEBUG - device_config_app - Probing slot 3 at http://10.51.128.92/slot/3/api/data/dev.json
+2025-04-09 11:49:42,061 - INFO - device_config_app - Slot 3 is available
+2025-04-09 11:49:42,062 - DEBUG - device_config_app - Probing slot 4 at http://10.51.128.92/slot/4/api/data/dev.json
+2025-04-09 11:49:42,113 - INFO - device_config_app - Slot 4 is available
+2025-04-09 11:49:42,114 - DEBUG - device_config_app - Probing slot 5 at http://10.51.128.92/slot/5/api/data/dev.json
+2025-04-09 11:49:42,165 - INFO - device_config_app - Slot 5 is available
+2025-04-09 11:49:42,165 - DEBUG - device_config_app - Probing slot 6 at http://10.51.128.92/slot/6/api/data/dev.json
+2025-04-09 11:49:42,225 - INFO - device_config_app - Slot 6 is available
+2025-04-09 11:49:42,226 - DEBUG - device_config_app - Probing slot 7 at http://10.51.128.92/slot/7/api/data/dev.json
+2025-04-09 11:49:42,273 - INFO - device_config_app - Slot 7 is available
+2025-04-09 11:49:42,274 - DEBUG - device_config_app - Probing slot 8 at http://10.51.128.92/slot/8/api/data/dev.json
+2025-04-09 11:49:42,348 - INFO - device_config_app - Slot 8 is available
+2025-04-09 11:49:42,352 - DEBUG - device_config_app - Probing slot 9 at http://10.51.128.92/slot/9/api/data/dev.json
+2025-04-09 11:49:42,360 - DEBUG - device_config_app - Slot 9 not found (404)
+2025-04-09 11:49:42,360 - DEBUG - device_config_app - Probing slot 10 at http://10.51.128.92/slot/10/api/data/dev.json
+2025-04-09 11:49:42,381 - INFO - device_config_app - Slot 10 is available
+2025-04-09 11:49:42,382 - INFO - device_config_app - Detected 9 slots: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 11:49:42,382 - DEBUG - device_config_app - Slot detection complete, found: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 11:49:42,384 - INFO - device_config_app - Detected 9 slots: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 11:49:51,957 - INFO - device_config_app - Starting slot detection for 10.51.128.92
+2025-04-09 11:49:51,960 - DEBUG - device_config_app - Slot detection worker started (max slots: 10)
+2025-04-09 11:49:51,960 - INFO - device_config_app - Detecting available slots (up to 10)
+2025-04-09 11:49:51,960 - DEBUG - device_config_app - Probing slot 1 at http://10.51.128.92/slot/1/api/data/dev.json
+2025-04-09 11:49:51,982 - INFO - device_config_app - Slot 1 is available
+2025-04-09 11:49:51,982 - DEBUG - device_config_app - Probing slot 2 at http://10.51.128.92/slot/2/api/data/dev.json
+2025-04-09 11:49:52,020 - INFO - device_config_app - Slot 2 is available
+2025-04-09 11:49:52,021 - DEBUG - device_config_app - Probing slot 3 at http://10.51.128.92/slot/3/api/data/dev.json
+2025-04-09 11:49:52,049 - INFO - device_config_app - Slot 3 is available
+2025-04-09 11:49:52,049 - DEBUG - device_config_app - Probing slot 4 at http://10.51.128.92/slot/4/api/data/dev.json
+2025-04-09 11:49:52,097 - INFO - device_config_app - Slot 4 is available
+2025-04-09 11:49:52,097 - DEBUG - device_config_app - Probing slot 5 at http://10.51.128.92/slot/5/api/data/dev.json
+2025-04-09 11:49:52,125 - INFO - device_config_app - Slot 5 is available
+2025-04-09 11:49:52,125 - DEBUG - device_config_app - Probing slot 6 at http://10.51.128.92/slot/6/api/data/dev.json
+2025-04-09 11:49:52,149 - INFO - device_config_app - Slot 6 is available
+2025-04-09 11:49:52,149 - DEBUG - device_config_app - Probing slot 7 at http://10.51.128.92/slot/7/api/data/dev.json
+2025-04-09 11:49:52,197 - INFO - device_config_app - Slot 7 is available
+2025-04-09 11:49:52,197 - DEBUG - device_config_app - Probing slot 8 at http://10.51.128.92/slot/8/api/data/dev.json
+2025-04-09 11:49:52,225 - INFO - device_config_app - Slot 8 is available
+2025-04-09 11:49:52,225 - DEBUG - device_config_app - Probing slot 9 at http://10.51.128.92/slot/9/api/data/dev.json
+2025-04-09 11:49:52,229 - DEBUG - device_config_app - Slot 9 not found (404)
+2025-04-09 11:49:52,230 - DEBUG - device_config_app - Probing slot 10 at http://10.51.128.92/slot/10/api/data/dev.json
+2025-04-09 11:49:52,257 - INFO - device_config_app - Slot 10 is available
+2025-04-09 11:49:52,257 - INFO - device_config_app - Detected 9 slots: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 11:49:52,257 - DEBUG - device_config_app - Slot detection complete, found: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 11:49:52,257 - INFO - device_config_app - Detected 9 slots: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 11:50:01,145 - INFO - device_config_app - Application closing
+2025-04-09 11:50:01,179 - INFO - device_config_app - Application exiting with code 0
+2025-04-09 11:50:04,805 - INFO - device_config_app - Application starting
+2025-04-09 11:50:04,852 - INFO - device_config_app - Main window initialized
+2025-04-09 11:50:04,931 - INFO - device_config_app - Main window displayed
+2025-04-09 11:50:06,649 - INFO - device_config_app - Log viewer opened
+2025-04-09 11:50:15,129 - INFO - device_config_app - Initial connection to 10.51.128.92
+2025-04-09 11:50:15,130 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 11:50:15,130 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 11:50:15,131 - INFO - device_config_app - Starting slot detection for 10.51.128.92
+2025-04-09 11:50:15,133 - DEBUG - device_config_app - Slot detection worker started (max slots: 10)
+2025-04-09 11:50:15,133 - INFO - device_config_app - Detecting available slots (up to 10)
+2025-04-09 11:50:15,134 - DEBUG - device_config_app - Fetching login page: http://10.51.128.92/slot/1/api/data.html
+2025-04-09 11:50:15,177 - DEBUG - device_config_app - Found login page
+2025-04-09 11:50:15,178 - DEBUG - device_config_app - Login form action: http://10.51.128.92/api/login
+2025-04-09 11:50:15,179 - DEBUG - device_config_app - Submitting login form with fields: ['username', 'password', 'ref']
+2025-04-09 11:50:15,249 - INFO - device_config_app - Successfully authenticated with the device
+2025-04-09 11:50:15,250 - DEBUG - device_config_app - Probing slot 1 at http://10.51.128.92/slot/1/api/data/dev.json
+2025-04-09 11:50:15,269 - INFO - device_config_app - Slot 1 is available
+2025-04-09 11:50:15,269 - DEBUG - device_config_app - Probing slot 2 at http://10.51.128.92/slot/2/api/data/dev.json
+2025-04-09 11:50:15,317 - INFO - device_config_app - Slot 2 is available
+2025-04-09 11:50:15,317 - DEBUG - device_config_app - Probing slot 3 at http://10.51.128.92/slot/3/api/data/dev.json
+2025-04-09 11:50:15,365 - INFO - device_config_app - Slot 3 is available
+2025-04-09 11:50:15,365 - DEBUG - device_config_app - Probing slot 4 at http://10.51.128.92/slot/4/api/data/dev.json
+2025-04-09 11:50:15,409 - INFO - device_config_app - Slot 4 is available
+2025-04-09 11:50:15,410 - DEBUG - device_config_app - Probing slot 5 at http://10.51.128.92/slot/5/api/data/dev.json
+2025-04-09 11:50:15,473 - INFO - device_config_app - Slot 5 is available
+2025-04-09 11:50:15,473 - DEBUG - device_config_app - Probing slot 6 at http://10.51.128.92/slot/6/api/data/dev.json
+2025-04-09 11:50:15,521 - INFO - device_config_app - Slot 6 is available
+2025-04-09 11:50:15,521 - DEBUG - device_config_app - Probing slot 7 at http://10.51.128.92/slot/7/api/data/dev.json
+2025-04-09 11:50:15,573 - INFO - device_config_app - Slot 7 is available
+2025-04-09 11:50:15,574 - DEBUG - device_config_app - Probing slot 8 at http://10.51.128.92/slot/8/api/data/dev.json
+2025-04-09 11:50:15,633 - INFO - device_config_app - Slot 8 is available
+2025-04-09 11:50:15,634 - DEBUG - device_config_app - Probing slot 9 at http://10.51.128.92/slot/9/api/data/dev.json
+2025-04-09 11:50:15,641 - DEBUG - device_config_app - Slot 9 not found (404)
+2025-04-09 11:50:15,641 - DEBUG - device_config_app - Probing slot 10 at http://10.51.128.92/slot/10/api/data/dev.json
+2025-04-09 11:50:15,665 - INFO - device_config_app - Slot 10 is available
+2025-04-09 11:50:15,665 - INFO - device_config_app - Detected 9 slots: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 11:50:15,666 - DEBUG - device_config_app - Slot detection complete, found: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 11:50:15,667 - INFO - device_config_app - Detected 9 slots: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 11:50:31,071 - INFO - device_config_app - Application closing
+2025-04-09 11:50:31,104 - INFO - device_config_app - Application exiting with code 0
+2025-04-09 11:51:00,387 - INFO - device_config_app - Application starting
+2025-04-09 11:51:00,439 - INFO - device_config_app - Main window initialized
+2025-04-09 11:51:00,527 - INFO - device_config_app - Main window displayed
+2025-04-09 11:51:04,296 - INFO - device_config_app - Log viewer opened
+2025-04-09 11:51:13,270 - INFO - device_config_app - Initial connection to 10.51.128.92
+2025-04-09 11:51:13,271 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 11:51:13,272 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 11:51:13,272 - INFO - device_config_app - Starting slot detection for 10.51.128.92
+2025-04-09 11:51:13,276 - DEBUG - device_config_app - Slot detection worker started (max slots: 10)
+2025-04-09 11:51:13,276 - INFO - device_config_app - Detecting available slots (up to 10)
+2025-04-09 11:51:13,276 - DEBUG - device_config_app - Fetching login page: http://10.51.128.92/slot/1/api/data.html
+2025-04-09 11:51:13,316 - DEBUG - device_config_app - Found login page
+2025-04-09 11:51:13,317 - DEBUG - device_config_app - Login form action: http://10.51.128.92/api/login
+2025-04-09 11:51:13,318 - DEBUG - device_config_app - Submitting login form with fields: ['username', 'password', 'ref']
+2025-04-09 11:51:13,377 - INFO - device_config_app - Successfully authenticated with the device
+2025-04-09 11:51:13,377 - DEBUG - device_config_app - Probing slot 1 at http://10.51.128.92/slot/1/api/data/dev.json
+2025-04-09 11:51:13,397 - INFO - device_config_app - Slot 1 is available
+2025-04-09 11:51:13,398 - DEBUG - device_config_app - Probing slot 2 at http://10.51.128.92/slot/2/api/data/dev.json
+2025-04-09 11:51:13,465 - INFO - device_config_app - Slot 2 is available
+2025-04-09 11:51:13,465 - DEBUG - device_config_app - Probing slot 3 at http://10.51.128.92/slot/3/api/data/dev.json
+2025-04-09 11:51:13,529 - INFO - device_config_app - Slot 3 is available
+2025-04-09 11:51:13,530 - DEBUG - device_config_app - Probing slot 4 at http://10.51.128.92/slot/4/api/data/dev.json
+2025-04-09 11:51:13,598 - INFO - device_config_app - Slot 4 is available
+2025-04-09 11:51:13,601 - DEBUG - device_config_app - Probing slot 5 at http://10.51.128.92/slot/5/api/data/dev.json
+2025-04-09 11:51:13,649 - INFO - device_config_app - Slot 5 is available
+2025-04-09 11:51:13,649 - DEBUG - device_config_app - Probing slot 6 at http://10.51.128.92/slot/6/api/data/dev.json
+2025-04-09 11:51:13,685 - INFO - device_config_app - Slot 6 is available
+2025-04-09 11:51:13,685 - DEBUG - device_config_app - Probing slot 7 at http://10.51.128.92/slot/7/api/data/dev.json
+2025-04-09 11:51:13,737 - INFO - device_config_app - Slot 7 is available
+2025-04-09 11:51:13,737 - DEBUG - device_config_app - Probing slot 8 at http://10.51.128.92/slot/8/api/data/dev.json
+2025-04-09 11:51:13,813 - INFO - device_config_app - Slot 8 is available
+2025-04-09 11:51:13,813 - DEBUG - device_config_app - Probing slot 9 at http://10.51.128.92/slot/9/api/data/dev.json
+2025-04-09 11:51:13,819 - DEBUG - device_config_app - Slot 9 not found (404)
+2025-04-09 11:51:13,819 - DEBUG - device_config_app - Probing slot 10 at http://10.51.128.92/slot/10/api/data/dev.json
+2025-04-09 11:51:13,840 - INFO - device_config_app - Slot 10 is available
+2025-04-09 11:51:13,842 - INFO - device_config_app - Detected 9 slots: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 11:51:13,843 - DEBUG - device_config_app - Slot detection complete, found: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 11:51:13,844 - INFO - device_config_app - Detected 9 slots: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 11:56:34,061 - INFO - device_config_app - Application closing
+2025-04-09 11:56:34,096 - INFO - device_config_app - Application exiting with code 0
+2025-04-09 11:56:36,129 - INFO - device_config_app - Application starting
+2025-04-09 11:56:36,185 - INFO - device_config_app - Main window initialized
+2025-04-09 11:56:36,276 - INFO - device_config_app - Main window displayed
+2025-04-09 11:56:38,834 - INFO - device_config_app - Log viewer opened
+2025-04-09 11:56:47,224 - INFO - device_config_app - Initial connection to 10.51.128.92
+2025-04-09 11:56:47,225 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 11:56:47,225 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 11:56:47,226 - INFO - device_config_app - Starting slot detection for 10.51.128.92
+2025-04-09 11:56:47,230 - DEBUG - device_config_app - Slot detection worker started (max slots: 10)
+2025-04-09 11:56:47,230 - INFO - device_config_app - Detecting available slots (up to 10)
+2025-04-09 11:56:47,230 - DEBUG - device_config_app - Fetching login page: http://10.51.128.92/slot/1/api/data.html
+2025-04-09 11:56:47,305 - DEBUG - device_config_app - Found login page
+2025-04-09 11:56:47,306 - DEBUG - device_config_app - Login form action: http://10.51.128.92/api/login
+2025-04-09 11:56:47,307 - DEBUG - device_config_app - Submitting login form with fields: ['username', 'password', 'ref']
+2025-04-09 11:56:47,376 - INFO - device_config_app - Successfully authenticated with the device
+2025-04-09 11:56:47,377 - DEBUG - device_config_app - Probing slot 1 at http://10.51.128.92/slot/1/api/data/dev.json
+2025-04-09 11:56:47,397 - INFO - device_config_app - Slot 1 is available
+2025-04-09 11:56:47,397 - DEBUG - device_config_app - Probing slot 2 at http://10.51.128.92/slot/2/api/data/dev.json
+2025-04-09 11:56:47,452 - INFO - device_config_app - Slot 2 is available
+2025-04-09 11:56:47,452 - DEBUG - device_config_app - Probing slot 3 at http://10.51.128.92/slot/3/api/data/dev.json
+2025-04-09 11:56:47,512 - INFO - device_config_app - Slot 3 is available
+2025-04-09 11:56:47,513 - DEBUG - device_config_app - Probing slot 4 at http://10.51.128.92/slot/4/api/data/dev.json
+2025-04-09 11:56:47,556 - INFO - device_config_app - Slot 4 is available
+2025-04-09 11:56:47,556 - DEBUG - device_config_app - Probing slot 5 at http://10.51.128.92/slot/5/api/data/dev.json
+2025-04-09 11:56:47,612 - INFO - device_config_app - Slot 5 is available
+2025-04-09 11:56:47,612 - DEBUG - device_config_app - Probing slot 6 at http://10.51.128.92/slot/6/api/data/dev.json
+2025-04-09 11:56:47,668 - INFO - device_config_app - Slot 6 is available
+2025-04-09 11:56:47,668 - DEBUG - device_config_app - Probing slot 7 at http://10.51.128.92/slot/7/api/data/dev.json
+2025-04-09 11:56:47,716 - INFO - device_config_app - Slot 7 is available
+2025-04-09 11:56:47,716 - DEBUG - device_config_app - Probing slot 8 at http://10.51.128.92/slot/8/api/data/dev.json
+2025-04-09 11:56:47,801 - INFO - device_config_app - Slot 8 is available
+2025-04-09 11:56:47,807 - DEBUG - device_config_app - Probing slot 9 at http://10.51.128.92/slot/9/api/data/dev.json
+2025-04-09 11:56:47,817 - DEBUG - device_config_app - Slot 9 not found (404)
+2025-04-09 11:56:47,817 - DEBUG - device_config_app - Probing slot 10 at http://10.51.128.92/slot/10/api/data/dev.json
+2025-04-09 11:56:47,840 - INFO - device_config_app - Slot 10 is available
+2025-04-09 11:56:47,841 - INFO - device_config_app - Detected 9 slots: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 11:56:47,841 - DEBUG - device_config_app - Slot detection complete, found: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 11:56:47,843 - INFO - device_config_app - Detected 9 slots: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 11:57:04,774 - INFO - device_config_app - Application starting
+2025-04-09 11:57:04,828 - INFO - device_config_app - Main window initialized
+2025-04-09 11:57:04,906 - INFO - device_config_app - Main window displayed
+2025-04-09 11:57:07,213 - INFO - device_config_app - Log viewer opened
+2025-04-09 11:57:15,379 - INFO - device_config_app - Initial connection to 10.51.128.92
+2025-04-09 11:57:15,380 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 11:57:15,380 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 11:57:15,381 - INFO - device_config_app - Starting slot detection for 10.51.128.92
+2025-04-09 11:57:15,385 - DEBUG - device_config_app - Slot detection worker started (max slots: 10)
+2025-04-09 11:57:15,385 - INFO - device_config_app - Detecting available slots (up to 10)
+2025-04-09 11:57:15,385 - DEBUG - device_config_app - Fetching login page: http://10.51.128.92/slot/1/api/data.html
+2025-04-09 11:57:15,454 - DEBUG - device_config_app - Found login page
+2025-04-09 11:57:15,456 - DEBUG - device_config_app - Login form action: http://10.51.128.92/api/login
+2025-04-09 11:57:15,457 - DEBUG - device_config_app - Submitting login form with fields: ['username', 'password', 'ref']
+2025-04-09 11:57:15,528 - INFO - device_config_app - Successfully authenticated with the device
+2025-04-09 11:57:15,529 - DEBUG - device_config_app - Probing slot 1 at http://10.51.128.92/slot/1/api/data/dev.json
+2025-04-09 11:57:15,558 - INFO - device_config_app - Slot 1 is available
+2025-04-09 11:57:15,559 - DEBUG - device_config_app - Probing slot 2 at http://10.51.128.92/slot/2/api/data/dev.json
+2025-04-09 11:57:15,677 - INFO - device_config_app - Slot 2 is available
+2025-04-09 11:57:15,677 - DEBUG - device_config_app - Probing slot 3 at http://10.51.128.92/slot/3/api/data/dev.json
+2025-04-09 11:57:15,728 - INFO - device_config_app - Slot 3 is available
+2025-04-09 11:57:15,729 - DEBUG - device_config_app - Probing slot 4 at http://10.51.128.92/slot/4/api/data/dev.json
+2025-04-09 11:57:15,792 - INFO - device_config_app - Slot 4 is available
+2025-04-09 11:57:15,793 - DEBUG - device_config_app - Probing slot 5 at http://10.51.128.92/slot/5/api/data/dev.json
+2025-04-09 11:57:15,852 - INFO - device_config_app - Slot 5 is available
+2025-04-09 11:57:15,852 - DEBUG - device_config_app - Probing slot 6 at http://10.51.128.92/slot/6/api/data/dev.json
+2025-04-09 11:57:15,904 - INFO - device_config_app - Slot 6 is available
+2025-04-09 11:57:15,904 - DEBUG - device_config_app - Probing slot 7 at http://10.51.128.92/slot/7/api/data/dev.json
+2025-04-09 11:57:15,952 - INFO - device_config_app - Slot 7 is available
+2025-04-09 11:57:15,952 - DEBUG - device_config_app - Probing slot 8 at http://10.51.128.92/slot/8/api/data/dev.json
+2025-04-09 11:57:15,996 - INFO - device_config_app - Slot 8 is available
+2025-04-09 11:57:15,996 - DEBUG - device_config_app - Probing slot 9 at http://10.51.128.92/slot/9/api/data/dev.json
+2025-04-09 11:57:16,002 - DEBUG - device_config_app - Slot 9 not found (404)
+2025-04-09 11:57:16,002 - DEBUG - device_config_app - Probing slot 10 at http://10.51.128.92/slot/10/api/data/dev.json
+2025-04-09 11:57:16,028 - INFO - device_config_app - Slot 10 is available
+2025-04-09 11:57:16,028 - INFO - device_config_app - Detected 9 slots: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 11:57:16,029 - DEBUG - device_config_app - Slot detection complete, found: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 11:57:16,030 - INFO - device_config_app - Detected 9 slots: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 11:57:16,031 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 11:57:16,033 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 11:57:16,033 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 11:57:16,036 - DEBUG - device_config_app - Fetching data for slot 1
+2025-04-09 11:57:16,036 - DEBUG - device_config_app - Fetching section 'dev' from http://10.51.128.92/slot/1/api/data/dev.json
+2025-04-09 11:57:16,060 - DEBUG - device_config_app - Successfully fetched section 'dev'
+2025-04-09 11:57:16,060 - DEBUG - device_config_app - Fetching section 'store' from http://10.51.128.92/slot/1/api/data/store.json
+2025-04-09 11:57:16,079 - DEBUG - device_config_app - Successfully fetched section 'store'
+2025-04-09 11:57:16,080 - DEBUG - device_config_app - Fetching section 'alarms' from http://10.51.128.92/slot/1/api/data/alarms.json
+2025-04-09 11:57:16,120 - DEBUG - device_config_app - Successfully fetched section 'alarms'
+2025-04-09 11:57:16,120 - DEBUG - device_config_app - Fetching section 'shelf' from http://10.51.128.92/slot/1/api/data/shelf.json
+2025-04-09 11:57:16,140 - DEBUG - device_config_app - Successfully fetched section 'shelf'
+2025-04-09 11:57:16,140 - DEBUG - device_config_app - Fetching section 'elements' from http://10.51.128.92/slot/1/api/data/elements.json
+2025-04-09 11:57:16,449 - DEBUG - device_config_app - Successfully fetched section 'elements'
+2025-04-09 11:57:16,450 - DEBUG - device_config_app - Fetching section 'network' from http://10.51.128.92/slot/1/api/data/network.json
+2025-04-09 11:57:16,472 - DEBUG - device_config_app - Successfully fetched section 'network'
+2025-04-09 11:57:16,472 - INFO - device_config_app - Successfully fetched 6 data sections
+2025-04-09 11:57:16,473 - DEBUG - device_config_app - Data received from slot 1
+2025-04-09 11:57:16,474 - INFO - device_config_app - Successfully connected to 10.51.128.92, slot 
+2025-04-09 11:57:16,475 - DEBUG - device_config_app - Processing device data
+2025-04-09 11:57:16,475 - DEBUG - device_config_app - Device data processing complete
+2025-04-09 11:57:35,444 - INFO - device_config_app - Application closing
+2025-04-09 11:57:35,480 - INFO - device_config_app - Application exiting with code 0
+2025-04-09 12:18:49,411 - INFO - device_config_app - Application starting
+2025-04-09 12:18:49,454 - INFO - device_config_app - Main window initialized
+2025-04-09 12:18:49,513 - INFO - device_config_app - Main window displayed
+2025-04-09 12:18:56,110 - INFO - device_config_app - Initial connection to 10.51.128.92
+2025-04-09 12:18:56,110 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 12:18:56,110 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 12:18:56,110 - INFO - device_config_app - Starting slot detection for 10.51.128.92
+2025-04-09 12:18:56,112 - DEBUG - device_config_app - Slot detection worker started (max slots: 10)
+2025-04-09 12:18:56,113 - INFO - device_config_app - Detecting available slots (up to 10)
+2025-04-09 12:18:56,113 - DEBUG - device_config_app - Fetching login page: http://10.51.128.92/slot/1/api/data.html
+2025-04-09 12:18:56,165 - DEBUG - device_config_app - Found login page
+2025-04-09 12:18:56,166 - DEBUG - device_config_app - Login form action: http://10.51.128.92/api/login
+2025-04-09 12:18:56,166 - DEBUG - device_config_app - Submitting login form with fields: ['username', 'password', 'ref']
+2025-04-09 12:18:56,214 - INFO - device_config_app - Successfully authenticated with the device
+2025-04-09 12:18:56,214 - DEBUG - device_config_app - Probing slot 1 at http://10.51.128.92/slot/1/api/data/dev.json
+2025-04-09 12:18:56,222 - INFO - device_config_app - Slot 1 is available
+2025-04-09 12:18:56,222 - DEBUG - device_config_app - Probing slot 2 at http://10.51.128.92/slot/2/api/data/dev.json
+2025-04-09 12:18:56,270 - INFO - device_config_app - Slot 2 is available
+2025-04-09 12:18:56,270 - DEBUG - device_config_app - Probing slot 3 at http://10.51.128.92/slot/3/api/data/dev.json
+2025-04-09 12:18:56,322 - INFO - device_config_app - Slot 3 is available
+2025-04-09 12:18:56,323 - DEBUG - device_config_app - Probing slot 4 at http://10.51.128.92/slot/4/api/data/dev.json
+2025-04-09 12:18:56,382 - INFO - device_config_app - Slot 4 is available
+2025-04-09 12:18:56,383 - DEBUG - device_config_app - Probing slot 5 at http://10.51.128.92/slot/5/api/data/dev.json
+2025-04-09 12:18:56,430 - INFO - device_config_app - Slot 5 is available
+2025-04-09 12:18:56,430 - DEBUG - device_config_app - Probing slot 6 at http://10.51.128.92/slot/6/api/data/dev.json
+2025-04-09 12:18:56,490 - INFO - device_config_app - Slot 6 is available
+2025-04-09 12:18:56,490 - DEBUG - device_config_app - Probing slot 7 at http://10.51.128.92/slot/7/api/data/dev.json
+2025-04-09 12:18:56,555 - INFO - device_config_app - Slot 7 is available
+2025-04-09 12:18:56,555 - DEBUG - device_config_app - Probing slot 8 at http://10.51.128.92/slot/8/api/data/dev.json
+2025-04-09 12:18:56,614 - INFO - device_config_app - Slot 8 is available
+2025-04-09 12:18:56,614 - DEBUG - device_config_app - Probing slot 9 at http://10.51.128.92/slot/9/api/data/dev.json
+2025-04-09 12:18:56,618 - DEBUG - device_config_app - Slot 9 not found (404)
+2025-04-09 12:18:56,618 - DEBUG - device_config_app - Probing slot 10 at http://10.51.128.92/slot/10/api/data/dev.json
+2025-04-09 12:18:56,642 - INFO - device_config_app - Slot 10 is available
+2025-04-09 12:18:56,643 - INFO - device_config_app - Detected 9 slots: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 12:18:56,643 - DEBUG - device_config_app - Slot detection complete, found: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 12:18:56,644 - INFO - device_config_app - Detected 9 slots: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 12:18:56,646 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 12:18:56,647 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 12:18:56,647 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 12:18:56,647 - DEBUG - device_config_app - Fetching data for slot 1
+2025-04-09 12:18:56,647 - DEBUG - device_config_app - Fetching section 'dev' from http://10.51.128.92/slot/1/api/data/dev.json
+2025-04-09 12:18:56,662 - DEBUG - device_config_app - Successfully fetched section 'dev'
+2025-04-09 12:18:56,663 - DEBUG - device_config_app - Fetching section 'store' from http://10.51.128.92/slot/1/api/data/store.json
+2025-04-09 12:18:56,682 - DEBUG - device_config_app - Successfully fetched section 'store'
+2025-04-09 12:18:56,682 - DEBUG - device_config_app - Fetching section 'alarms' from http://10.51.128.92/slot/1/api/data/alarms.json
+2025-04-09 12:18:56,722 - DEBUG - device_config_app - Successfully fetched section 'alarms'
+2025-04-09 12:18:56,722 - DEBUG - device_config_app - Fetching section 'shelf' from http://10.51.128.92/slot/1/api/data/shelf.json
+2025-04-09 12:18:56,742 - DEBUG - device_config_app - Successfully fetched section 'shelf'
+2025-04-09 12:18:56,742 - DEBUG - device_config_app - Fetching section 'elements' from http://10.51.128.92/slot/1/api/data/elements.json
+2025-04-09 12:18:56,823 - DEBUG - device_config_app - Successfully fetched section 'elements'
+2025-04-09 12:18:56,823 - DEBUG - device_config_app - Fetching section 'network' from http://10.51.128.92/slot/1/api/data/network.json
+2025-04-09 12:18:56,838 - DEBUG - device_config_app - Successfully fetched section 'network'
+2025-04-09 12:18:56,838 - INFO - device_config_app - Successfully fetched 6 data sections
+2025-04-09 12:18:56,838 - DEBUG - device_config_app - Data received from slot 1
+2025-04-09 12:18:56,839 - INFO - device_config_app - Successfully connected to 10.51.128.92, slot 
+2025-04-09 12:18:56,839 - DEBUG - device_config_app - Processing device data
+2025-04-09 12:18:56,839 - DEBUG - device_config_app - Device data processing complete
+2025-04-09 12:23:58,911 - INFO - device_config_app - Application closing
+2025-04-09 12:23:58,924 - INFO - device_config_app - Application exiting with code 0
+2025-04-09 12:24:08,881 - INFO - device_config_app - Application starting
+2025-04-09 12:24:08,922 - INFO - device_config_app - Main window initialized
+2025-04-09 12:24:08,983 - INFO - device_config_app - Main window displayed
+2025-04-09 12:24:14,709 - INFO - device_config_app - Initial connection to 10.51.128.92
+2025-04-09 12:24:14,710 - DEBUG - device_config_app - Created API client for 10.51.128.92
+2025-04-09 12:24:14,710 - INFO - device_config_app - Created new API client for 10.51.128.92
+2025-04-09 12:24:14,710 - INFO - device_config_app - Starting slot detection for 10.51.128.92
+2025-04-09 12:24:14,712 - DEBUG - device_config_app - Slot detection worker started (max slots: 10)
+2025-04-09 12:24:14,712 - INFO - device_config_app - Detecting available slots (up to 10)
+2025-04-09 12:24:14,712 - DEBUG - device_config_app - Fetching login page: http://10.51.128.92/slot/1/api/data.html
+2025-04-09 12:24:14,779 - DEBUG - device_config_app - Found login page
+2025-04-09 12:24:14,780 - DEBUG - device_config_app - Login form action: http://10.51.128.92/api/login
+2025-04-09 12:24:14,780 - DEBUG - device_config_app - Submitting login form with fields: ['username', 'password', 'ref']
+2025-04-09 12:24:14,810 - INFO - device_config_app - Successfully authenticated with the device
+2025-04-09 12:24:14,810 - DEBUG - device_config_app - Probing slot 1 at http://10.51.128.92/slot/1/api/data/dev.json
+2025-04-09 12:24:14,829 - INFO - device_config_app - Slot 1 is available
+2025-04-09 12:24:14,830 - DEBUG - device_config_app - Probing slot 2 at http://10.51.128.92/slot/2/api/data/dev.json
+2025-04-09 12:24:14,873 - INFO - device_config_app - Slot 2 is available
+2025-04-09 12:24:14,873 - DEBUG - device_config_app - Probing slot 3 at http://10.51.128.92/slot/3/api/data/dev.json
+2025-04-09 12:24:14,946 - INFO - device_config_app - Slot 3 is available
+2025-04-09 12:24:14,946 - DEBUG - device_config_app - Probing slot 4 at http://10.51.128.92/slot/4/api/data/dev.json
+2025-04-09 12:24:15,026 - INFO - device_config_app - Slot 4 is available
+2025-04-09 12:24:15,027 - DEBUG - device_config_app - Probing slot 5 at http://10.51.128.92/slot/5/api/data/dev.json
+2025-04-09 12:24:15,073 - INFO - device_config_app - Slot 5 is available
+2025-04-09 12:24:15,074 - DEBUG - device_config_app - Probing slot 6 at http://10.51.128.92/slot/6/api/data/dev.json
+2025-04-09 12:24:15,113 - INFO - device_config_app - Slot 6 is available
+2025-04-09 12:24:15,114 - DEBUG - device_config_app - Probing slot 7 at http://10.51.128.92/slot/7/api/data/dev.json
+2025-04-09 12:24:15,165 - INFO - device_config_app - Slot 7 is available
+2025-04-09 12:24:15,165 - DEBUG - device_config_app - Probing slot 8 at http://10.51.128.92/slot/8/api/data/dev.json
+2025-04-09 12:24:15,213 - INFO - device_config_app - Slot 8 is available
+2025-04-09 12:24:15,214 - DEBUG - device_config_app - Probing slot 9 at http://10.51.128.92/slot/9/api/data/dev.json
+2025-04-09 12:24:15,217 - DEBUG - device_config_app - Slot 9 not found (404)
+2025-04-09 12:24:15,218 - DEBUG - device_config_app - Probing slot 10 at http://10.51.128.92/slot/10/api/data/dev.json
+2025-04-09 12:24:15,237 - INFO - device_config_app - Slot 10 is available
+2025-04-09 12:24:15,238 - INFO - device_config_app - Detected 9 slots: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 12:24:15,238 - DEBUG - device_config_app - Slot detection complete, found: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 12:24:15,238 - INFO - device_config_app - Detected 9 slots: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2025-04-09 12:24:15,240 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 12:24:15,241 - INFO - device_config_app - Refreshing data for slot 1
+2025-04-09 12:24:15,241 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 12:24:15,241 - INFO - device_config_app - Attempting to connect to 10.51.128.92, slot 1
+2025-04-09 12:24:15,241 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 12:24:15,241 - DEBUG - device_config_app - Fetching data for slot 1
+2025-04-09 12:24:15,241 - DEBUG - device_config_app - Fetching section 'dev' from http://10.51.128.92/slot/1/api/data/dev.json
+2025-04-09 12:24:15,242 - DEBUG - device_config_app - API worker started for slot 1
+2025-04-09 12:24:15,242 - INFO - device_config_app - Fetching data from slot 1
+2025-04-09 12:24:15,242 - DEBUG - device_config_app - Fetching data for slot 1
+2025-04-09 12:24:15,242 - DEBUG - device_config_app - Fetching section 'dev' from http://10.51.128.92/slot/1/api/data/dev.json
+2025-04-09 12:24:15,257 - DEBUG - device_config_app - Successfully fetched section 'dev'
+2025-04-09 12:24:15,257 - DEBUG - device_config_app - Fetching section 'store' from http://10.51.128.92/slot/1/api/data/store.json
+2025-04-09 12:24:15,277 - DEBUG - device_config_app - Successfully fetched section 'store'
+2025-04-09 12:24:15,278 - DEBUG - device_config_app - Fetching section 'alarms' from http://10.51.128.92/slot/1/api/data/alarms.json
+2025-04-09 12:24:15,298 - DEBUG - device_config_app - Successfully fetched section 'dev'
+2025-04-09 12:24:15,298 - DEBUG - device_config_app - Fetching section 'store' from http://10.51.128.92/slot/1/api/data/store.json
+2025-04-09 12:24:15,317 - DEBUG - device_config_app - Successfully fetched section 'store'
+2025-04-09 12:24:15,318 - DEBUG - device_config_app - Fetching section 'alarms' from http://10.51.128.92/slot/1/api/data/alarms.json
+2025-04-09 12:24:15,318 - DEBUG - device_config_app - Successfully fetched section 'alarms'
+2025-04-09 12:24:15,318 - DEBUG - device_config_app - Fetching section 'shelf' from http://10.51.128.92/slot/1/api/data/shelf.json
+2025-04-09 12:24:15,338 - DEBUG - device_config_app - Successfully fetched section 'shelf'
+2025-04-09 12:24:15,338 - DEBUG - device_config_app - Fetching section 'elements' from http://10.51.128.92/slot/1/api/data/elements.json
+2025-04-09 12:24:15,341 - DEBUG - device_config_app - Successfully fetched section 'alarms'
+2025-04-09 12:24:15,341 - DEBUG - device_config_app - Fetching section 'shelf' from http://10.51.128.92/slot/1/api/data/shelf.json
+2025-04-09 12:24:15,381 - DEBUG - device_config_app - Successfully fetched section 'shelf'
+2025-04-09 12:24:15,381 - DEBUG - device_config_app - Fetching section 'elements' from http://10.51.128.92/slot/1/api/data/elements.json
+2025-04-09 12:24:15,409 - DEBUG - device_config_app - Successfully fetched section 'elements'
+2025-04-09 12:24:15,409 - DEBUG - device_config_app - Fetching section 'network' from http://10.51.128.92/slot/1/api/data/network.json
+2025-04-09 12:24:15,425 - DEBUG - device_config_app - Successfully fetched section 'network'
+2025-04-09 12:24:15,425 - INFO - device_config_app - Successfully fetched 6 data sections
+2025-04-09 12:24:15,426 - DEBUG - device_config_app - Data received from slot 1
+2025-04-09 12:24:15,426 - INFO - device_config_app - Successfully connected to 10.51.128.92, slot 1
+2025-04-09 12:24:15,427 - DEBUG - device_config_app - Processing device data
+2025-04-09 12:24:15,427 - DEBUG - device_config_app - Device data processing complete
+2025-04-09 12:24:15,457 - DEBUG - device_config_app - Successfully fetched section 'elements'
+2025-04-09 12:24:15,458 - DEBUG - device_config_app - Fetching section 'network' from http://10.51.128.92/slot/1/api/data/network.json
