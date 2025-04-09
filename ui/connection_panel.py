@@ -1,12 +1,14 @@
 from PyQt6.QtWidgets import (QGroupBox, QGridLayout, QLabel, QLineEdit, 
                              QComboBox, QPushButton, QHBoxLayout, QProgressBar)
-from PyQt6.QtCore import pyqtSignal, Qt
+from PyQt6.QtCore import pyqtSignal, Qt, QTimer
+from utils.logger import logger
 
 class ConnectionPanel(QGroupBox):
     """Widget for connection settings"""
     
     connectionRequested = pyqtSignal(str, str, str)  # ip, username, password - no slot needed initially
     refreshDataRequested = pyqtSignal()  # Signal to refresh data for current slot
+    allSlotsRequested = pyqtSignal()  # Signal to fetch data for all slots
     
     def __init__(self, parent=None):
         super().__init__("Connection Settings", parent)
@@ -85,21 +87,35 @@ class ConnectionPanel(QGroupBox):
     
     def on_refresh_data(self):
         """Signal to refresh data for current slot"""
-        if self.slot_combo.currentText():
+        if self.slot_combo.currentText() == "All Slots":
+            logger.debug("Refreshing data for all slots")
+            self.set_connecting_state()
+            self.allSlotsRequested.emit()
+        elif self.slot_combo.currentText():
+            logger.debug(f"Refreshing data for slot {self.slot_combo.currentText()}")
             self.set_connecting_state()
             self.refreshDataRequested.emit()
     
     def on_slot_changed(self, index):
         """Handle slot selection change"""
+        logger.debug(f"Slot selection changed to index {index}, text: {self.slot_combo.currentText()}")
         # Only refresh if index is valid and the combo box is enabled
         if index >= 0 and self.slot_combo.isEnabled() and self.slot_combo.count() > 0:
-            # Make sure we're not showing placeholder text (shouldn't happen with this fix)
-            if self.slot_combo.currentText() != "No slots detected":
+            selected_slot = self.slot_combo.currentText()
+            
+            if selected_slot == "All Slots":
+                logger.debug("'All Slots' selected, requesting all slots data")
+                self.set_connecting_state()
+                self.allSlotsRequested.emit()
+            elif selected_slot != "No slots detected":
+                logger.debug(f"Slot {selected_slot} selected, requesting data")
                 self.set_connecting_state()
                 self.refreshDataRequested.emit()
     
     def update_slots(self, slots):
         """Update the slot dropdown with detected slots"""
+        logger.debug(f"Updating slots dropdown with: {slots}")
+        
         # Hide progress indicator
         self.progress_bar.setVisible(False)
         
@@ -110,6 +126,11 @@ class ConnectionPanel(QGroupBox):
         self.slot_combo.clear()
         
         if slots:
+            logger.debug(f"Adding {len(slots)} slots to dropdown")
+            
+            # Add "All Slots" option as the first item
+            self.slot_combo.addItem("All Slots")
+            
             # Add all detected slots
             for slot in slots:
                 self.slot_combo.addItem(str(slot))
@@ -117,11 +138,14 @@ class ConnectionPanel(QGroupBox):
             # Enable the slot dropdown and refresh button
             self.slot_combo.setEnabled(True)
             self.refresh_button.setEnabled(True)
-            self.set_connected_state()
             
-            # Select the first slot by default
-            self.slot_combo.setCurrentIndex(0)
+            # Set to "Connected - Select Slot" state
+            self.set_select_slot_state()
+            
+            # Don't automatically select a slot - let the user choose
+            logger.debug("Slots populated, ready for user selection")
         else:
+            logger.debug("No slots to add to dropdown")
             # If no slots detected, leave the combo box empty 
             # (the placeholder text will show)
             self.slot_combo.setEnabled(False)
@@ -131,15 +155,16 @@ class ConnectionPanel(QGroupBox):
         
         # Unblock signals
         self.slot_combo.blockSignals(False)
-        
-        # If there are slots, trigger a refresh with the current selection
-        if slots and self.slot_combo.currentIndex() >= 0:
-            # Use QTimer to call this after the UI is updated
-            from PyQt6.QtCore import QTimer
-            QTimer.singleShot(0, self.on_refresh_data)
+    
+    def force_update_ui(self):
+        """Safely update the UI without recursive repaints"""
+        # Removed the explicit update calls to prevent recursive repaints
+        # Just let the Qt event loop handle the updates naturally
+        pass
     
     def set_connecting_state(self):
         """Update UI for connecting state"""
+        logger.debug("Setting UI to connecting state")
         self.connect_button.setEnabled(False)
         self.refresh_button.setEnabled(False)
         self.progress_bar.setVisible(True)
@@ -147,15 +172,30 @@ class ConnectionPanel(QGroupBox):
         self.connection_status.setStyleSheet("color: orange; font-weight: bold;")
     
     def set_connected_state(self):
-        """Update UI for connected state"""
+        """Update UI for connected state with active slot"""
+        logger.debug("Setting UI to connected state with active slot")
         self.connect_button.setEnabled(True)
         self.refresh_button.setEnabled(True)
         self.progress_bar.setVisible(False)
         self.connection_status.setText("Connected")
         self.connection_status.setStyleSheet("color: green; font-weight: bold;")
     
+    def set_select_slot_state(self):
+        """Update UI for connected but waiting for slot selection"""
+        logger.debug("Setting UI to 'Connected - Select Slot' state")
+        self.connect_button.setEnabled(True)
+        self.refresh_button.setEnabled(False)  # Disable until slot is selected
+        self.progress_bar.setVisible(False)
+        self.connection_status.setText("Connected - Select Slot")
+        self.connection_status.setStyleSheet("color: green; font-weight: bold;")
+        
+        # Highlight the slot dropdown (just set focus, don't open popup)
+        self.slot_combo.setFocus()
+        # Removed showPopup() to prevent automatic opening
+    
     def set_error_state(self):
         """Update UI for error state"""
+        logger.debug("Setting UI to error state")
         self.connect_button.setEnabled(True)
         self.refresh_button.setEnabled(self.slot_combo.count() > 0)  # Only if we had slots before
         self.progress_bar.setVisible(False)

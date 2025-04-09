@@ -12,6 +12,17 @@ class DeviceApiClient:
         self.username = username
         self.password = password
         self.session = requests.Session()
+        
+        # Configure session for better performance
+        self.session.keep_alive = True
+        adapter = requests.adapters.HTTPAdapter(
+            pool_connections=10,  # Number of connections to keep in pool
+            pool_maxsize=20,      # Maximum number of connections in pool
+            max_retries=1,        # Only retry once
+            pool_block=False      # Don't block when pool is depleted
+        )
+        self.session.mount('http://', adapter)
+        
         self.authenticated = False
         logger.debug(f"Created API client for {base_ip}")
     
@@ -107,56 +118,14 @@ class DeviceApiClient:
             logger.error(f"Authentication error: {str(e)}")
             return False
 
+    # Define both method names to ensure backward compatibility
+    def detect_slots_direct(self, max_slots=10):
+        """Alias for detect_slots to maintain backward compatibility"""
+        return self.detect_slots(max_slots)
+        
     def detect_slots(self, max_slots=10):
-        """Detect available slots in the device by probing each potential slot"""
-        logger.info(f"Detecting available slots (up to {max_slots})")
-        
-        # Ensure we're authenticated
-        if not self.authenticate():
-            logger.error("Failed to authenticate, cannot detect slots")
-            return []
-        
-        available_slots = []
-        
-        # Check each possible slot
-        for slot in range(1, max_slots + 1):
-            try:
-                # Try a lightweight request that's likely to work if the slot exists
-                # Using dev.json as it's a common endpoint that should exist for all slots
-                url = f"http://{self.base_ip}/slot/{slot}/api/data/dev.json"
-                logger.debug(f"Probing slot {slot} at {url}")
-                
-                response = self.session.get(url, timeout=5)  # Shorter timeout for probing
-                
-                # If we get a successful response or a specific error that indicates the slot exists
-                if response.status_code == 200:
-                    logger.info(f"Slot {slot} is available")
-                    available_slots.append(slot)
-                elif response.status_code == 404:
-                    logger.debug(f"Slot {slot} not found (404)")
-                else:
-                    logger.debug(f"Slot {slot} returned status code {response.status_code}")
-                    
-            except requests.exceptions.RequestException as e:
-                logger.debug(f"Error probing slot {slot}: {str(e)}")
-        
-        if not available_slots:
-            logger.warning("No slots detected, defaulting to slot 1")
-            return [1]  # Default to slot 1 if none detected
-        
-        logger.info(f"Detected {len(available_slots)} slots: {available_slots}")
-        return available_slots
-
-    def detect_slots_direct(self):
-        """Detect available slots in the device using direct API endpoint
-        
-        This method uses the shelf/slots/detected_coll API endpoint to get all detected
-        slots in a single request, which is more efficient than probing each slot individually.
-        
-        Returns:
-            list: A sorted list of detected slot numbers
-        """
-        logger.info("Detecting available slots using direct API endpoint")
+        """Detect available slots using the direct API endpoint"""
+        logger.info("Detecting available slots using direct shelf API")
         
         # Ensure we're authenticated
         if not self.authenticate():
@@ -164,9 +133,9 @@ class DeviceApiClient:
             return []
         
         try:
-            # Use the direct API endpoint for slot detection
+            # Use the direct API endpoint to get slot information
             url = f"http://{self.base_ip}/api/data/shelf/slots/detected_coll"
-            logger.debug(f"Fetching slots from direct API: {url}")
+            logger.debug(f"Fetching slots from: {url}")
             
             response = self.session.get(url, timeout=10)
             
@@ -182,49 +151,101 @@ class DeviceApiClient:
                 
                 # Retry the request
                 response = self.session.get(url, timeout=10)
-                
+            
             if response.status_code == 200:
-                # Parse the JSON response
                 try:
+                    # Parse the JSON response
                     data = response.json()
-                    # Extract slot numbers from the response
+                    
+                    # Extract slot information from the response
                     slots = []
-                    # The structure is expected to be: data -> shelf -> slots -> detected_coll -> {slot_numbers}
                     if (data and 'data' in data and 'shelf' in data['data'] and 
                         'slots' in data['data']['shelf'] and 'detected_coll' in data['data']['shelf']['slots']):
-                        detected_slots = data['data']['shelf']['slots']['detected_coll']
-                        # The keys in detected_coll should be slot numbers (as strings)
-                        slots = [int(slot_num) for slot_num in detected_slots.keys()]
-                        logger.info(f"Successfully detected {len(slots)} slots via direct API: {slots}")
-                        return sorted(slots)  # Return slots in numerical order
+                        
+                        slot_data = data['data']['shelf']['slots']['detected_coll']
+                        # Extract the slot numbers (keys) and convert to integers
+                        slots = sorted([int(slot_id) for slot_id in slot_data.keys()])
+                        logger.info(f"Successfully detected {len(slots)} slots: {slots}")
+                        return slots
                     else:
-                        logger.warning("Unexpected response structure from direct API")
-                        logger.debug(f"Response: {data}")
+                        logger.warning("Unexpected response format from shelf API")
+                        logger.debug(f"Response data: {data}")
+                        # Default to slot 1 if we can't find slots in the response
+                        logger.warning("No slots detected in API response, defaulting to slot 1")
+                        return [1]
+                        
                 except json.JSONDecodeError:
-                    logger.error("Failed to parse JSON response from direct API")
-                    # Try to extract JSON content if not valid JSON
+                    logger.error("Failed to parse JSON response from shelf API")
+                    # Extract any JSON from potentially mixed content
                     json_content = self._extract_json_from_content(response.text)
                     if json_content:
-                        logger.debug("Extracted JSON content, trying to process again")
-                        # Process the extracted JSON
                         try:
-                            if (json_content and 'data' in json_content and 'shelf' in json_content['data'] and 
+                            # Try to extract slots from the extracted JSON
+                            if ('data' in json_content and 'shelf' in json_content['data'] and 
                                 'slots' in json_content['data']['shelf'] and 'detected_coll' in json_content['data']['shelf']['slots']):
-                                detected_slots = json_content['data']['shelf']['slots']['detected_coll']
-                                slots = [int(slot_num) for slot_num in detected_slots.keys()]
-                                logger.info(f"Successfully detected {len(slots)} slots via direct API (from extracted JSON): {slots}")
-                                return sorted(slots)
+                                
+                                slot_data = json_content['data']['shelf']['slots']['detected_coll']
+                                slots = sorted([int(slot_id) for slot_id in slot_data.keys()])
+                                logger.info(f"Successfully extracted {len(slots)} slots from mixed content")
+                                return slots
                         except Exception as e:
                             logger.error(f"Error processing extracted JSON: {str(e)}")
+                    
+                    # Default to slot 1 if we can't parse the JSON
+                    logger.warning("No slots detected in extracted JSON, defaulting to slot 1")
+                    return [1]
             else:
-                logger.warning(f"Failed to fetch slots via direct API: status code {response.status_code}")
+                logger.error(f"Failed to fetch slots: status code {response.status_code}")
+                # Default to slot 1 if the API request fails
+                logger.warning("API request failed, defaulting to slot 1")
+                return [1]
                 
         except requests.exceptions.RequestException as e:
-            logger.error(f"Request error fetching slots via direct API: {str(e)}")
+            logger.error(f"Error fetching slots: {str(e)}")
+            # Default to slot 1 if there's a request exception
+            logger.warning("API request exception, defaulting to slot 1")
+            return [1]
+
+    def get_focused_slot_data(self, slot_number):
+        """Get only essential data from a slot - optimized for fetching multiple slots"""
+        # Ensure we're authenticated
+        if not self.authenticate():
+            logger.error("Failed to authenticate, cannot fetch data")
+            return None
         
-        # Fallback to the original method if direct API fails
-        logger.info("Falling back to slot-by-slot detection")
-        return self.detect_slots()
+        logger.debug(f"Fetching focused data for slot {slot_number}")
+        
+        # Define only the essential sections we need for multi-slot view
+        essential_sections = {
+            "dev": f"http://{self.base_ip}/slot/{slot_number}/api/data/dev.json",
+            "alarms": f"http://{self.base_ip}/slot/{slot_number}/api/data/alarms.json"
+        }
+        
+        # Fetch essential sections with shorter timeouts
+        combined_data = {"data": {}}
+        for section_name, section_url in essential_sections.items():
+            try:
+                response = self.session.get(section_url, timeout=5)  # Shorter timeout
+                
+                if response.status_code == 200:
+                    try:
+                        section_data = response.json()
+                        combined_data["data"][section_name] = section_data
+                    except json.JSONDecodeError:
+                        # Just skip problematic JSON in focused mode
+                        logger.debug(f"Skipping problematic JSON in section '{section_name}'")
+                else:
+                    logger.debug(f"Failed to fetch section '{section_name}': status code {response.status_code}")
+            
+            except requests.exceptions.RequestException as e:
+                logger.debug(f"Error fetching section '{section_name}': {str(e)}")
+        
+        # Check if we have at least some data
+        if not combined_data["data"]:
+            logger.warning(f"No data sections were successfully fetched for slot {slot_number}")
+            return None
+        
+        return combined_data
 
     def get_slot_data(self, slot_number):
         """Get comprehensive data from a specific slot/card"""
