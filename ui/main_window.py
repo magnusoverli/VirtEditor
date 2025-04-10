@@ -282,20 +282,32 @@ class MainWindow(QMainWindow):
                 # Disconnect signals based on worker type
                 if worker_attr == 'slot_data_fetcher':
                     logger.debug(f"Disconnecting signals for {worker_attr}")
-                    worker.progress_updated.disconnect()
-                    worker.all_data_ready.disconnect()
-                    worker.error_occurred.disconnect()
-                    worker.finished.disconnect()
+                    try:
+                        worker.progress_updated.disconnect()
+                        worker.all_data_ready.disconnect()
+                        worker.error_occurred.disconnect()
+                        # Don't disconnect from finished signal as it's a built-in Qt signal
+                    except TypeError:
+                        # Handle case where signal might not be connected
+                        logger.debug(f"Some signals were already disconnected for {worker_attr}")
                 elif worker_attr == 'worker':  # ApiWorker
                     logger.debug(f"Disconnecting signals for {worker_attr}")
-                    worker.dataReady.disconnect()
-                    worker.error.disconnect()
-                    worker.finished.disconnect()
+                    try:
+                        worker.dataReady.disconnect()
+                        worker.error.disconnect()
+                        # Don't disconnect from finished signal as it's a built-in Qt signal
+                    except TypeError:
+                        # Handle case where signal might not be connected
+                        logger.debug(f"Some signals were already disconnected for {worker_attr}")
                 elif worker_attr == 'slot_detection_worker':
                     logger.debug(f"Disconnecting signals for {worker_attr}")
-                    worker.slotsDetected.disconnect()
-                    worker.error.disconnect()
-                    worker.finished.disconnect()
+                    try:
+                        worker.slotsDetected.disconnect()
+                        worker.error.disconnect()
+                        # Don't disconnect from finished signal as it's a built-in Qt signal
+                    except TypeError:
+                        # Handle case where signal might not be connected
+                        logger.debug(f"Some signals were already disconnected for {worker_attr}")
                 
                 # Stop and clean up the worker
                 worker.stop()
@@ -335,15 +347,18 @@ class MainWindow(QMainWindow):
                         f"Serial: {device_data.product_info.get('serialfull', 'N/A')}, "
                         f"SW: {device_data.product_info.get('swver', 'N/A')}")
             
-            # Log alarm counts
+            # Log alarm counts - ensure we convert string values to integers before comparing
             if device_data.alarm_info:
-                logger.info(f"Alarms: {device_data.alarm_info.get('n_total', 0)} total, "
-                        f"{device_data.alarm_info.get('n_critical', 0)} critical, "
-                        f"{device_data.alarm_info.get('n_major', 0)} major")
+                # Convert values to integers first
+                total_alarms = int(device_data.alarm_info.get('n_total', 0)) if isinstance(device_data.alarm_info.get('n_total'), (int, str)) else 0
+                critical_alarms = int(device_data.alarm_info.get('n_critical', 0)) if isinstance(device_data.alarm_info.get('n_critical'), (int, str)) else 0
+                major_alarms = int(device_data.alarm_info.get('n_major', 0)) if isinstance(device_data.alarm_info.get('n_major'), (int, str)) else 0
                 
-                # Log warnings if there are critical alarms
-                if device_data.alarm_info.get('n_critical', 0) > 0:
-                    logger.warning(f"Device has {device_data.alarm_info.get('n_critical', 0)} critical alarms!")
+                logger.info(f"Alarms: {total_alarms} total, {critical_alarms} critical, {major_alarms} major")
+                
+                # Log warnings if there are critical alarms - now safe to compare as we've converted to int
+                if critical_alarms > 0:
+                    logger.warning(f"Device has {critical_alarms} critical alarms!")
         
         except Exception as e:
             logger.error(f"Error processing device data: {str(e)}")
@@ -355,15 +370,25 @@ class MainWindow(QMainWindow):
     
     def closeEvent(self, event):
         """Handle window close event"""
-        # Clean up any running threads
-        self.cleanup_worker('worker')
-        self.cleanup_worker('slot_detection_worker')
-        self.cleanup_worker('slot_data_fetcher')
+        logger.info("Application closing - starting cleanup")
         
+        # Define the cleanup order for worker threads
+        worker_attrs = ['worker', 'slot_detection_worker', 'slot_data_fetcher']
+        
+        # Clean up each worker in order
+        for worker_attr in worker_attrs:
+            if self.cleanup_worker(worker_attr):
+                logger.debug(f"Successfully cleaned up {worker_attr}")
+            else:
+                logger.debug(f"No {worker_attr} to clean up or cleanup failed")
+        
+        # Close the log viewer if it exists
         if self.log_viewer:
+            logger.debug("Closing log viewer")
             self.log_viewer.close()
+            self.log_viewer = None
         
-        logger.info("Application closing")
+        logger.info("Application cleanup complete")
         event.accept()
 
     def detect_slots(self, ip, username, password):

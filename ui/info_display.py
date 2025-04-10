@@ -63,8 +63,20 @@ class InfoDisplay(QTabWidget):
             # Pool collection
             if 'pool_coll' in device_data.memory_info:
                 for pool_id, pool in device_data.memory_info['pool_coll'].items():
-                    usage_percent = (pool.get('used', 0) / pool.get('size', 1)) * 100
-                    basic_info.append(f"Pool {pool_id}: {usage_percent:.1f}% used ({pool.get('used', 0)}/{pool.get('size', 0)} bytes)")
+                    try:
+                        # Convert string values to integers before calculation
+                        used = int(pool.get('used', 0)) if isinstance(pool.get('used'), (int, str)) else 0
+                        size = int(pool.get('size', 1)) if isinstance(pool.get('size'), (int, str)) else 1
+                        
+                        # Prevent division by zero
+                        if size > 0:
+                            usage_percent = (used / size) * 100
+                            basic_info.append(f"Pool {pool_id}: {usage_percent:.1f}% used ({used}/{size} bytes)")
+                        else:
+                            basic_info.append(f"Pool {pool_id}: 0.0% used ({used}/0 bytes)")
+                    except (ValueError, TypeError) as e:
+                        # Handle case where values can't be converted to int
+                        basic_info.append(f"Pool {pool_id}: N/A% used ({pool.get('used', 'N/A')}/{pool.get('size', 'N/A')} bytes)")
             basic_info.append("")
         
         # Alarm information
